@@ -1,1 +1,13 @@
+# Python
 __pycache__/
+*.pyc
+
+# Virtual env
+.venv/
+
+# Local secrets
+.env
+
+# Output and artifacts
+output/
+*.log

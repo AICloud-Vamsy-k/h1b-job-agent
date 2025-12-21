@@ -1,0 +1,17 @@
+# Core LLM + orchestration
+crewai
+crewai-tools
+
+# (Optional) LangChain helpers – keep for RAG and utilities
+#langchain
+#langchain-community
+#langchain-openai
+
+# Utilities
+python-dotenv
+requests
+pydantic
+tqdm
+
+# Vector DB – friendly on Windows
+chromadb
