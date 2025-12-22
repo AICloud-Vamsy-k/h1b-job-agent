@@ -4,8 +4,9 @@ from pathlib import Path
 import json
 from typing import Any, Dict
 
-from crewai import Agent, Task, Crew
+from crewai import Agent, Task, Crew, LLM
 
+from . import config  # ensures config.py runs and prints
 from .config import PROJECT_ROOT, DEFAULT_MODEL_NAME
 from src.profile_rag import retrieve_relevant_chunks
 
@@ -29,19 +30,23 @@ def create_job_match_crew(job_description: str) -> Crew:
     relevant_chunks = retrieve_relevant_chunks(job_description, top_k=5)
     relevant_chunks_text = "\n\n".join(relevant_chunks)
 
+    # Explicit OpenAI LLM so CrewAI knows which provider to use
+    openai_llm = LLM(
+        model=DEFAULT_MODEL_NAME,
+        provider="openai",
+        # Uses OPENAI_API_KEY from environment; no need to pass it directly
+    )
+
     job_match_agent = Agent(
         role="Job Match Analyst",
-        goal=(
-            "Evaluate how well the candidate fits a given job posting and "
-            "explain the match clearly and honestly."
-        ),
+        goal=("Evaluate how well the candidate fits a given job posting and "
+              "explain the match clearly and honestly."),
         backstory=(
             "You are an experienced technical recruiter. "
             "You compare job descriptions with the candidate profile. "
             "You never fabricate skills or experience; you only use what "
-            "the candidate profile states."
-        ),
-        model=DEFAULT_MODEL_NAME,
+            "the candidate profile states."),
+        llm=openai_llm,
     )
 
     combined_text = f"""
@@ -60,22 +65,21 @@ Most relevant experience chunks for this job (retrieved via RAG):
 
     task = Task(
         description=(
-            "Read the job description, the candidate profile, and the retrieved "
-            "relevant experience chunks below. "
+            "Read the job description, the candidate profile, and the "
+            "retrieved relevant experience chunks below. "
             "Rate the match from 0 to 1 and identify strengths and gaps.\n\n"
             f"{combined_text}\n\n"
             "Return your answer STRICTLY as JSON with keys:\n"
-            "- \"match_score\" (0-1 float)\n"
-            "- \"strengths\" (list of strings)\n"
-            "- \"gaps\" (list of strings)\n"
-            "- \"summary\" (short paragraph).\n"
+            '- "match_score" (0-1 float)\n'
+            '- "strengths" (list of strings)\n'
+            '- "gaps" (list of strings)\n'
+            '- "summary" (short paragraph).\n'
             "Only output valid JSON, with double quotes and no trailing commas."
         ),
-        expected_output=(
-            "Return JSON with keys: "
-            "match_score (0-1 float), strengths (list of strings), "
-            "gaps (list of strings), summary (short paragraph)."
-        ),
+        expected_output=
+        ("Return JSON with keys: match_score (0-1 float), strengths "
+         "(list of strings), gaps (list of strings), summary (short paragraph)."
+         ),
         agent=job_match_agent,
     )
 
@@ -89,7 +93,7 @@ Most relevant experience chunks for this job (retrieved via RAG):
 def evaluate_job(job_description: str) -> Dict[str, Any]:
     """Run the Job Match crew on a job description and return a dict."""
     crew: Crew = create_job_match_crew(job_description)
-    crew_output = crew.kickoff()  # This is a CrewOutput object
+    crew_output = crew.kickoff()  # CrewOutput object
 
     # Try to get raw text from crew output and parse as JSON
     try:
@@ -99,7 +103,6 @@ def evaluate_job(job_description: str) -> Dict[str, Any]:
 
     try:
         data = json.loads(raw_text)
-        # Expect keys: match_score, strengths, gaps, summary
         return {
             "match_score": data.get("match_score"),
             "strengths": data.get("strengths"),
@@ -135,7 +138,6 @@ Nice to have:
 - Docker, Kubernetes
 - CI/CD pipelines
 """
-
     result = evaluate_job(sample_job)
     print("=== Job Match Crew Result ===")
     print(result)

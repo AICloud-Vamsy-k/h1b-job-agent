@@ -11,3 +11,5 @@ __pycache__/
 # Output and artifacts
 output/
 *.log
+
+h1b-job-agent-notes.txt

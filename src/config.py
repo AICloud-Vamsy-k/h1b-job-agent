@@ -18,6 +18,4 @@ OPENAI_API_BASE: str | None = os.getenv("OPENAI_API_BASE")
 DEFAULT_MODEL_NAME: str = os.getenv("DEFAULT_MODEL_NAME", "gpt-4.1-mini")
 
 if not OPENAI_API_KEY:
-    raise RuntimeError(
-        "OPENAI_API_KEY is not set. Add it to your .env file at the project root."
-    )
+    print("WARNING: OPENAI_API_KEY is not set in config.py environment")
