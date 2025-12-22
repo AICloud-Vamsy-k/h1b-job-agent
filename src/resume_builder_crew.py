@@ -6,7 +6,8 @@ from typing import Any, Dict
 from crewai import Agent, Task, Crew
 
 from src.config import DEFAULT_MODEL_NAME
-from src.job_match_crew import load_profile_text  # you already have this
+from src.job_match_crew import load_profile_text
+from src.profile_rag import retrieve_relevant_chunks
 
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
@@ -57,6 +58,10 @@ def create_resume_editor_crew(
     strengths_text = "\n".join(f"- {s}" for s in strengths or [])
     gaps_text = "\n".join(f"- {g}" for g in gaps or [])
 
+    # Get top relevant profile chunks for this JD
+    relevant_chunks = retrieve_relevant_chunks(job_description, top_k=5)
+    relevant_chunks_text = "\n\n".join(relevant_chunks)
+
     task_description = f"""
 You are given:
 
@@ -85,14 +90,19 @@ Gaps:
 Summary of fit:
 {summary}
 
+5) Most relevant profile chunks retrieved for this job:
+-------------------------------------------------------
+{relevant_chunks_text}
+
 Your job:
 - Produce a fully tailored resume for THIS specific job.
 - Keep all facts honest: do NOT invent companies, dates, degrees, or tools the candidate does not already have.
+- Prefer using information from the retrieved profile chunks when writing detailed bullets or project descriptions.
 - You MAY:
   - Reorder sections or bullets.
   - Rewrite sentences to better match the job wording.
   - Emphasize the most relevant projects/skills for this JD.
-  - Add specific metrics or impact ONLY if they are clearly implied by the existing resume/profile.
+  - Add specific metrics or impact ONLY if they are clearly implied by the existing resume, profile, or retrieved chunks.
 - You MUST:
   - Make the result look like it was carefully written by a human.
   - Avoid obvious AI phrases (e.g., "As an AI language model", generic buzzword walls).
@@ -133,8 +143,6 @@ def generate_tailored_resume(job_description: str, match_result: Dict[str, Any])
     )
 
     result = crew.kickoff()
-    # result is usually a TaskOutput; get its raw text
-    # If your CrewAI version returns plain string, this will still work.
     try:
         tailored_resume = str(result)
     except Exception:

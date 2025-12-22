@@ -3,6 +3,8 @@ from pathlib import Path
 from .job_match_crew import run_job_match_example, evaluate_job
 from .resume_builder_crew import generate_tailored_resume
 from .gap_analyzer_crew import analyze_gaps_for_learning
+from .pipeline import run_daily_job_pipeline
+
 
 
 
@@ -19,7 +21,8 @@ def run_daily_pipeline():
         "2 = Paste a job description and evaluate\n"
         "3 = Paste a job description and generate tailored resume\n"
         "4 = Paste a job description and get gap analysis + learning plan\n"
-        "Enter 1, 2, 3 or 4: "
+        "5 = Run daily pipeline on jobs_sample.csv\n"
+        "Enter 1, 2, 3, 4 or 5: "
     ).strip()
 
     if choice == "1":
@@ -131,6 +134,19 @@ def run_daily_pipeline():
         out_path.write_text(report_text, encoding="utf-8")
 
         print(f"Gap analysis + learning plan saved to: {out_path}")
+
+    elif choice == "5":
+        print("Running daily pipeline on data/jobs_sample.csv ...")
+        confirm_resumes = input(
+            "Generate tailored resumes for candidate jobs as well? (y/n): "
+        ).strip().lower()
+        generate_resumes = confirm_resumes == "y"
+
+        run_daily_job_pipeline(
+            sponsorship_threshold=0.6,
+            match_threshold=0.65,
+            generate_resumes=generate_resumes,
+        )
 
     else:
         print("Invalid choice. Please run again and enter 1, 2 or 3.")

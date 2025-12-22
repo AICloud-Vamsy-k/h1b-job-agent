@@ -6,6 +6,7 @@ from crewai import Agent, Task, Crew
 
 from src.config import DEFAULT_MODEL_NAME
 from src.job_match_crew import load_profile_text
+from src.profile_rag import retrieve_relevant_chunks
 
 
 def create_gap_analyzer_crew(
@@ -41,6 +42,10 @@ def create_gap_analyzer_crew(
     strengths_text = "\n".join(f"- {s}" for s in strengths)
     gaps_text = "\n".join(f"- {g}" for g in gaps)
 
+    # Use RAG to get the most relevant profile chunks for this JD
+    relevant_chunks = retrieve_relevant_chunks(job_description, top_k=5)
+    relevant_chunks_text = "\n\n".join(relevant_chunks)
+
     task_description = f"""
 You are helping a senior engineer on H1B in the US improve fit for a specific job.
 
@@ -65,6 +70,10 @@ Gaps:
 Summary of fit:
 {summary}
 
+4) Most relevant profile chunks retrieved for this job:
+-------------------------------------------------------
+{relevant_chunks_text}
+
 Your job now:
 - Identify the TOP 3-5 missing skills or experience areas that matter most for THIS job.
 - For each key gap, propose:
@@ -75,7 +84,8 @@ Your job now:
   - Use realistic, public or dummy data.
   - Produce something that can be shown in interviews (GitHub repo, screenshots, small demo).
 - Make sure project ideas are aligned with this JD (e.g., cloud data pipelines, ETL, Databricks, Snowflake, leadership, etc., depending on the gaps).
-- Remember: do NOT assume the candidate already has skills that are not in the profile/resume; these are learning goals, not current skills.
+- Prefer using information from the retrieved profile chunks when referring to the candidate's existing strengths and experience.
+- Remember: do NOT assume the candidate already has skills that are not in the profile/resume or retrieved chunks; these are learning goals, not current skills.
 
 Output format:
 1) Short paragraph: overall view of the gaps.
@@ -114,7 +124,7 @@ def analyze_gaps_for_learning(
 
     # result is a CrewOutput / TaskOutput-like object; get its text
     try:
-        report_text = result.raw  # if CrewOutput-style [web:31][web:50]
+        report_text = result.raw
     except Exception:
         report_text = str(result)
 

@@ -1,10 +1,13 @@
+# src/job_match_crew.py
+
 from pathlib import Path
+import json
+from typing import Any, Dict
 
 from crewai import Agent, Task, Crew
 
 from .config import PROJECT_ROOT, DEFAULT_MODEL_NAME
-import json
-from typing import Any, Dict
+from src.profile_rag import retrieve_relevant_chunks
 
 
 def load_profile_text() -> str:
@@ -18,9 +21,13 @@ def load_profile_text() -> str:
 def create_job_match_crew(job_description: str) -> Crew:
     """
     Create a Crew that takes a job description and your profile,
-    and explains the match.
+    and explains the match. Now also uses RAG (relevant chunks).
     """
     profile_text = load_profile_text()
+
+    # Get most relevant chunks from profile for this JD (RAG)
+    relevant_chunks = retrieve_relevant_chunks(job_description, top_k=5)
+    relevant_chunks_text = "\n\n".join(relevant_chunks)
 
     job_match_agent = Agent(
         role="Job Match Analyst",
@@ -39,17 +46,30 @@ def create_job_match_crew(job_description: str) -> Crew:
 
     combined_text = f"""
 Job description:
+----------------
 {job_description}
 
-Candidate profile:
+Candidate profile (summary):
+----------------------------
 {profile_text}
+
+Most relevant experience chunks for this job (retrieved via RAG):
+-----------------------------------------------------------------
+{relevant_chunks_text}
 """
 
     task = Task(
         description=(
-            "Read the job description and the candidate profile below. "
+            "Read the job description, the candidate profile, and the retrieved "
+            "relevant experience chunks below. "
             "Rate the match from 0 to 1 and identify strengths and gaps.\n\n"
-            f"{combined_text}"
+            f"{combined_text}\n\n"
+            "Return your answer STRICTLY as JSON with keys:\n"
+            "- \"match_score\" (0-1 float)\n"
+            "- \"strengths\" (list of strings)\n"
+            "- \"gaps\" (list of strings)\n"
+            "- \"summary\" (short paragraph).\n"
+            "Only output valid JSON, with double quotes and no trailing commas."
         ),
         expected_output=(
             "Return JSON with keys: "
@@ -65,15 +85,18 @@ Candidate profile:
     )
     return crew
 
+
 def evaluate_job(job_description: str) -> Dict[str, Any]:
     """Run the Job Match crew on a job description and return a dict."""
     crew: Crew = create_job_match_crew(job_description)
-    crew_output = crew.kickoff()  # This is a CrewOutput object now
+    crew_output = crew.kickoff()  # This is a CrewOutput object
 
-    # Option A: if your task already returns JSON, parse crew_output.raw
-    raw_text = crew_output.raw  # final text from the crew [web:50][web:52][web:63]
+    # Try to get raw text from crew output and parse as JSON
+    try:
+        raw_text = crew_output.raw
+    except Exception:
+        raw_text = str(crew_output)
 
-    # Try to parse JSON
     try:
         data = json.loads(raw_text)
         # Expect keys: match_score, strengths, gaps, summary
@@ -116,4 +139,3 @@ Nice to have:
     result = evaluate_job(sample_job)
     print("=== Job Match Crew Result ===")
     print(result)
-
