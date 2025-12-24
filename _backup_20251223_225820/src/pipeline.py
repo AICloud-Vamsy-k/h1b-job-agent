@@ -9,7 +9,6 @@ from src.job_match_crew import evaluate_job
 from src.resume_builder_crew import generate_tailored_resume
 from src.gap_analyzer_crew import analyze_gaps_for_learning
 
-
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "output"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -55,11 +54,20 @@ def run_daily_job_pipeline(
             # Optional: generate tailored resume
             if generate_resumes:
                 print("-> Generating tailored resume for this job...")
-                tailored_text = generate_tailored_resume(job.description, match_result)
+                resume_result = generate_tailored_resume(job.description, match_result)
+
+                # Save markdown preview
                 filename = f"tailored_resume_job_{job.id}.md"
                 resume_path = OUTPUT_DIR / filename
-                resume_path.write_text(tailored_text, encoding="utf-8")
+                resume_path.write_text(resume_result["markdown_text"], encoding="utf-8")
                 tailored_resume_path = str(resume_path)
+
+                # Optionally also copy DOCX next to it if available
+                docx_path = resume_result.get("docx_path")
+                if docx_path is not None:
+                    target_docx = resume_path.with_suffix(".docx")
+                    target_docx.write_bytes(docx_path.read_bytes())
+
             else:
                 print("-> Candidate job, but resume generation disabled.")
 

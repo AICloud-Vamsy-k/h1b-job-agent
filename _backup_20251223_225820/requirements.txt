@@ -15,12 +15,6 @@ requests
 pydantic
 tqdm
 docxtpl
-beautifulsoup4
-selenium
-openai
-pandas
-schedule
-
 
 
 # Vector DB – friendly on Windows

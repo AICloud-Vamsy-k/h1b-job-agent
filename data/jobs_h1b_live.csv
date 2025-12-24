@@ -1,0 +1,215 @@
+title,company,location,description,url,source,h1b_eligible,eligibility_reason,search_date
+Solution Architect – Data/ 6months,PGC Digital (America) Inc: CMMI Level 3 Company,"Phoenix, Arizona","Overview:
+
+The Solution Architect – Data is responsible for contributing to the design, modernization, and optimization of enterprise-scale data systems, as well as the maintenance and operations strategy for CHP. This role involves designing and implementing data systems that organize, store, and manage data within our cloud data platform.
+
+The architect will perform continuous maintenance and operations work for CHP in the cloud environment. They will review and analyze CHP’s data infrastructure, plan future database solutions, and implement systems to support data management for CHP users.
+
+Additionally, this role is accountable for ensuring data integrity, making sure the CHP team adheres to data governance standards to maintain accuracy, consistency, and reliability across all systems. The architect will identify data discrepancies and quality issues, and work to resolve them.
+
+This position requires a strong blend of architectural leadership, technical depth, and the ability to collaborate with business stakeholders, data engineers, machine learning practitioners, and domain experts to deliver scalable, secure, and reliable AI-driven solutions.
+
+The ideal candidate will have a proven track record of delivering end-to-end ETL/ELT pipelines across Databricks, Azure, and AWS environments.
+
+Key Responsibilities:
+
+• Design scalable data lake and data architectures using Databricks and cloud-native services.
+
+• Develop metadata-driven, parameterized ingestion frameworks and multi-layer data architectures.
+
+• Optimize data workloads and performance.
+
+• Define data governance frameworks for CHP.
+
+• Design and develop robust data pipelines.
+
+• Architect AI systems, including RAG workflows and prompt engineering.
+
+• Lead cloud migration initiatives from legacy systems to modern data platforms.
+
+• Provide architectural guidance, best practices, and technical leadership across teams.
+
+• Build documentation, reusable modules, and standardized patterns.
+
+Required Skills and Experience:
+
+• Strong expertise in cloud platforms, primarily Azure or AWS.
+
+• Hands-on experience with Databricks.
+
+• Deep proficiency in Python and SQL.
+
+• Expertise in building ETL/ELT pipelines and ADF workflows.
+
+• Experience architecting data lakes and implementing data governance frameworks.
+
+• Hands-on experience with CI/CD, DevOps, and Git-based development.
+
+• Ability to translate business requirements into technical architecture.
+
+Technical Expertise:
+
+Programming: Python, SQL, R
+
+Big Data: Hadoop, Spark, Kafka, Hive
+
+Cloud Platforms: Azure (ADF, Databricks, Azure OpenAI), AWS
+
+Data Warehousing: Redshift, SQL Server
+
+ETL/ELT Tools: SSIS
+
+Required Educational Background:
+
+• Bachelor’s degree in Computer Science, Information Technology, Information Systems, Engineering, or a related field.
+
+• 6+ years of experience in data engineering or .NET development.",https://www.linkedin.com/jobs/view/solution-architect-%E2%80%93-data-6months-at-pgc-digital-america-inc-cmmi-level-3-company-4346101069?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or Green Card holders are eligible, nor does it mention that no sponsorship is available. Therefore, it can be inferred that H1B visa holders may be considered for this position.",2025-12-23 23:40
+Data Architect (Databricks Data Engineer),NISC,"Bismarck, North Dakota","NISC is a technology solutions provider serving over 960 utilities and broadband companies across North America. They are seeking an experienced Data Engineer to curate and optimize data pipeline architecture in Databricks, ensuring optimal data delivery across various application teams.
+
+Responsibilities
+• Assemble large, complex data sets that meet functional / non-functional business requirements
+• Understanding of Data Warehouse and Data Lakehouse paradigms
+• Design and build optimal data pipelines from a wide variety of data sources using AWS and Databricks technologies
+• Work with stakeholders including the Executive, Product, Data and Design teams to assist with data-related technical issues and support their data infrastructure needs
+• Create data tools for analytics and data scientist team members that assist them in building and optimizing a unified data stream
+• Work with other data engineering experts to strive for greater functionality while making data more discoverable, addressable, trustworthy, and secure
+• Identify, design, and implement internal process improvements: automating manual processes, optimizing data delivery, re-designing infrastructure for greater scalability, etc
+• Create and maintain a culture of engagement and one that is conducive of NISC's Statement of Shared Values
+• Commitment to NISC's Statement of Shared Values
+
+Skills
+• Experience building and optimizing data pipelines, architectures, and data sets
+• Hands-on experience developing and optimizing data pipelines and workflows using Databricks
+• Experience performing root cause analysis on internal and external data and processes to answer specific business questions and identify opportunities for improvement
+• Strong analytic skills related to working with unstructured datasets
+• Build ETL processes supporting data transformation, data structures, metadata, dependency, and workload management
+• Working knowledge of message queuing, stream processing, and highly scalable data stores
+• Experience supporting and working with cross-functional teams in a dynamic environment
+• Candidate with experience in a Data Engineer role, who has attained a BS or MS degree in Computer Science, Statistics, Informatics, Information Systems, or another quantitative field
+• Experience with AWS: Lambda, S3, SQS, SNS, CloudWatch, etc
+• Experience with Databricks and Delta Lake
+• Experience with big data tools: Hadoop, Spark, Kafka, etc
+• Experience with relational SQL and NoSQL databases, including Oracle, Postgres Cassandra, and DynamoDb
+• Experience with data pipeline and workflow management tools: Hevo Data, Airflow, etc
+• Experience with AWS cloud services: EC2, Databricks, EMR
+• Experience with stream-processing systems: Apache Spark, Kafka Streams, Spring Cloud, etc
+• Experience with object-oriented languages: Java, Scala
+• Strong verbal and written communication skills
+• Ability to demonstrate composure and think analytically in high pressure situations
+• Experience with scripting languages: Python, JavaScript, Bash, etc
+• Bachelor's degree in Computer Science, Statistics, Informatics, Information Systems or similar discipline, preferred
+• Certification in Database Administration, along with relevant experience in lieu of 4-year degree
+
+Benefits
+• Medical, Dental and Vision Insurance.
+• Health Savings Account (HSA) with $100 monthly contributions from NISC.
+• Dependent Care Flexible Spending Account (FSA) thru Paylocity.
+• Fully covered life insurance up to x3 annual base salary.
+• Fully covered short- and long-term disability.
+• 401(k), traditional or Roth, with employee match up to 6% and employer 4% salary base contributions.
+• PTO accrual levels dependent on years of service, 120 Life Leave Event hours, 9 paid holidays and an annual holiday week.
+• $2,500 Interest-FREE technology loan program.
+• $25,000 employee educational assistance program.
+• Volunteer, Wellness, Family Events and other employee fun supplied by our committees.
+• Employee Assistance Program; assisting employees and dependents with virtually any life event.
+• Benevolence Committee to support employees with financial hardships like unexpected medical bills, funerals and other unfortunate hardships.
+
+Company Overview
+• National Information Solutions Cooperative (NISC) is an information technology organization that develops, implements and supports software and hardware solutions for our Members/Customers. It was founded in 2000, and is headquartered in Lake Saint Louis, Missouri, USA, with a workforce of 1001-5000 employees. Its website is http://www.nisc.coop/.
+
+Company H1B Sponsorship
+• NISC has a track record of offering H1B sponsorships, with 3 in 2025, 7 in 2024, 1 in 2023, 1 in 2022. Please note that this does not guarantee sponsorship for this specific role.",https://jobright.ai/jobs/info/69433f2350bbaf7650551ee6?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not include any explicit or implicit restrictions against H1B visa holders, such as requirements for Green Card status or permanent US work authorization. There are no statements indicating that visa sponsorship is unavailable, which suggests that H1B candidates may be considered.",2025-12-23 23:40
+"Software Engineer, Data Products",The Washington Post,"Washington, District of Columbia","Work with stakeholders to understand business needs and develop highly scalable solutions and make recommendations to help solve problems or improve processes. Architect, build and maintain analytics applications and products which includes connecting data sources, analyzing data, building business logic, and configuring visualization. Create, maintain, and integrate large-scale databases and other cloud-computing infrastructure. Understand and work with multiple data sources to meet business rules and supports analytical needs. Analyze potential data quality issues to determine the root cause. Participate in ongoing evolution, improvement, and automation of products and solutions. Apply agile and software engineering principles to gather business requirements and translate to functional/technical specifications. Document technical work and ensure quality throughout the software development lifecycle. Prepare and present work products to various stakeholders including executives.
+
+The Washington Post is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We do not discriminate based upon race, religion, color, national origin, sex, sexual orientation, gender identity, age, status as a protected veteran, status as an individual with a disability, or other applicable legally protected characteristics.",https://www.jobzmall.com/the-washington-post/job/software-engineer-data-products?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or Green Card holders are eligible, nor does it mention that no sponsorship is available. Therefore, H1B visa holders are likely eligible for this position.",2025-12-23 23:40
+Sr. Cloud Architect,Super Micro Computer,"San Jose, California","Job Req ID: 27871
+
+About Supermicro:
+
+Supermicro® is a Top Tier provider of advanced server, storage, and networking solutions for Data Center, Cloud Computing, Enterprise IT, Hadoop/ Big Data, Hyperscale, HPC and IoT/Embedded customers worldwide. We are the #5 fastest growing company among the Silicon Valley Top 50 technology firms. Our unprecedented global expansion has provided us with the opportunity to offer a large number of new positions to the technology community. We seek talented, passionate, and committed engineers, technologists, and business leaders to join us.
+
+Job Summary:
+
+We seek a Senior Cloud Architect to own full-lifecycle delivery of SuperCloud Automation Center (SCAC) software orchestrator solutions. In this role, you will translate business and technical requirements into secure, scalable architectures; standardize patterns; identify and mitigate risks; and guide customers from discovery and POC through production. Success requires strong program management, deep infrastructure/cloud automation expertise, and crisp communication across teams.
+
+Essential Duties and Responsibilities:
+
+Includes the following essential duties and responsibilities (other duties may also be assigned):
+• Leading architecture design for cloud-based orchestration and provisioning solutions
+• Evaluating new technologies and rapidly developing proof-of-concepts that can be taken to production ready products
+• Own end-to-end solution delivery for SCAC discovery, architecture, implementation, and production readiness
+• Create and socialize architectural artifacts in the form of HLD/LLD, integration diagrams, data flows, and ADR’s
+• Design integration patterns across Supermicro Systems Management Software, Kubernetes, OpenShift, VMware, storage, network, and CI/CD
+• Identify and close design gaps and risks while proposing mitigation options with clear trade-offs and TCO impact
+• Establish and enforce standards in the form of reference architectures, golden paths, and IaC modules
+• Champion security-by-design with zero-trust principles, secrets management, vulnerability scanning, and compliance guardrails
+• Define orchestration workflows for cluster bring-up, upgrades, patching, and teardown
+• Specify installer strategy and UX, including preflight checks, image registry, mirror configuration, repository layout, admin node, IP addressing, and hypervisor flags.
+• Formalize integration contracts, API contracts, API’s with SCAC, telemetry, logging, and external registries
+• Lead performance, scalability, modeling, and validation to include, but not limited to, concurrency limits, queue backoff, and artifact caching
+• Guide delivery execution from design to GA, acceptance criteria, risk registers, exit gates, and sign-offs for security, scale, and operability
+• Validate the end-to-end solutions in reference labs and customer environments, ensuring upgrade and rollback readiness, and versioning and packing strategy
+
+Qualifications:
+
+• BS in Computer Science, Computer/Software Engineering, Electrical Engineering, or related field
+• Architectural experience 8 years in a formal architect role, solutions, systems, and software owning HLD and LLD with cross-team design inputs
+• Strong Python coding, analysis, debugging and problem solving
+• Hands on Linux development, Docker, Containers, plus experience with OpenShift or vanilla K8s with understanding controllers, operators, and multi-clusters
+• Experience in Git based development, SQL or NoSQL databases ( e.g. PostgreSQL), Restful API design.
+• Security fundamentals, zero-trust principles, image signing, and SBOM basics in vulnerability management
+• Experience in architecting end-to-end solutions, systems management framework for private cloud-based offerings
+• Excellent communication, documentation skills
+
+Salary Range
+
+​$180,000 - $200,000
+
+The salary offered will depend on several factors, including your location, level, education, training, specific skills, years of experience, and comparison to other employees already in this role. In addition to a comprehensive benefits package, candidates may be eligible for other forms of compensation, such as participation in bonus and equity award programs.
+
+​
+
+EEO Statement
+
+Supermicro is an Equal Opportunity Employer and embraces diversity in our employee population. It is the policy of Supermicro to provide equal opportunity to all qualified applicants and employees without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability, protected veteran stat",https://jobs.supermicro.com/job/San-Jose-Sr_-Cloud-Architect-Cali/1340240000/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not explicitly state any requirements for U.S. citizenship, permanent residency, or restrictions on visa sponsorship. There are no phrases indicating that H1B visa holders are excluded, such as ""Green Card required"" or ""No visa sponsorship available."" Therefore, it can be interpreted that H1B visa holders are eligible for this position.",2025-12-23 23:40
+Big data Data Engineer - Global Data Analytics,Atria Group LLC,"Silver Spring, Maryland","Company Description
+
+We specialize in Staffing, Consulting, Software Development, and Training along with IT services to small to medium size companies. AG's primary objective is to help companies maximize their IT resources and meet the ever-changing IT needs and challenges.
+
+In addition, AG offers enterprise resource planning and enterprise application integration, supply-chain management, e-commerce solutions, and B2B public exchanges and B2B process integration solutions. Our company provides application analysis, design, development and programming, software engineering, systems development, testing, integration, and implementation, and management consulting services to various clients - including governmental agencies and private companies - throughout the United States and India.
+
+We provide these services in multiple computing environments and use technologies such as client/server architecture, object-oriented programming languages and tools, distributed database management systems, state-of-the-art networking, and communications infrastructures. Our honest and realistic approach to recruiting dictates that AG does not entice or lure engineers from their employers. We represent only high caliber technical professionals who have committed to making a change required by career.
+
+Job Description
+
+Must Have Skills -
+
+Overall 10+ years' experience in Datawarehousing related technologies.
+
+3+ years architecting and managing AWS Big Data products and services such as EMR, RedShift, Data Pipeline and Kinesis
+
+3+ years of working experience with Hadoop-based technologies such as MapReduce, Hive/Pig/Impala and NoSQL Databases
+
+3+ years of extensive working knowledge in different programming or scripting languages like Java, Linux, C++, PHP, Ruby, Python and/or R.
+
+Experience working with unstructured, semi-structured and unstructured data sets including social, weblogs and real-time data feeds
+
+Proficient in designing efficient and robust ETL/ELT workflows
+
+Able to tune Big Data solutions to improve performance and end-user experience
+
+Bachelor's or Master's degree in computer science or software engineering
+
+Knowledge BI and Visualization tools such as MicroStrategy/Tableau is a plus
+
+Experience in the media industry is a plus
+
+Must have the legal right to work in the United States
+
+Additional Information
+
+GOOD COMMUNICATION SKILLS
+
+DURATION: 6 Months
+
+INTERVIEW: PHONE","https://www.ziprecruiter.com/c/Atria-Group-LLC/Job/Big-data-Data-Engineer-Global-Data-Analytics/-in-Silver-Spring,MD?jid=7b5bd2d5926ca00b&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",JSearch,True,"The job posting does not contain any explicit or implicit restrictions against H1B visa holders, such as ""Green Card required,"" ""US Citizen only,"" or ""No visa sponsorship."" There are no statements indicating that sponsorship is unavailable, and it does not specify a requirement for permanent US work authorization. Therefore, it can be interpreted that H1B visa holders are eligible for this position.",2025-12-23 23:40

@@ -5,8 +5,8 @@ from typing import Any, Dict
 from crewai import Agent, Task, Crew
 
 from src.config import DEFAULT_MODEL_NAME
-from src.job_match_crew import load_profile_text
 from src.profile_rag import retrieve_relevant_chunks
+from src.profile_summary import get_or_build_profile_summary
 
 
 def create_gap_analyzer_crew(
@@ -32,7 +32,8 @@ def create_gap_analyzer_crew(
         verbose=False,
     )
 
-    profile_text = load_profile_text()
+    # Resume-based profile summary and RAG chunks
+    profile_summary = get_or_build_profile_summary()
 
     match_score = match_result.get("match_score")
     strengths = match_result.get("strengths") or []
@@ -42,9 +43,16 @@ def create_gap_analyzer_crew(
     strengths_text = "\n".join(f"- {s}" for s in strengths)
     gaps_text = "\n".join(f"- {g}" for g in gaps)
 
-    # Use RAG to get the most relevant profile chunks for this JD
-    relevant_chunks = retrieve_relevant_chunks(job_description, top_k=5)
-    relevant_chunks_text = "\n\n".join(relevant_chunks)
+    # Use RAG to get the most relevant resume chunks for this JD
+    #relevant_chunks = retrieve_relevant_chunks(
+    #    query="skills and experience relevant to this job description: " + job_description,
+    #    top_k=10,
+    #)
+    #relevant_chunks_text = "\n\n".join(relevant_chunks) if relevant_chunks else "(no relevant chunks found)"
+
+    # TEMP: disable RAG
+    relevant_chunks = []
+    relevant_chunks_text = "(RAG disabled for debugging)"
 
     task_description = f"""
 You are helping a senior engineer on H1B in the US improve fit for a specific job.
@@ -53,9 +61,9 @@ You are helping a senior engineer on H1B in the US improve fit for a specific jo
 -------------------
 {job_description}
 
-2) Candidate's profile summary (from profile file):
----------------------------------------------------
-{profile_text}
+2) Candidate's profile summary (derived from the current resume):
+-----------------------------------------------------------------
+{profile_summary or "(no profile summary available; resume may not be set yet)"}
 
 3) Job match analysis:
 ----------------------
@@ -70,8 +78,8 @@ Gaps:
 Summary of fit:
 {summary}
 
-4) Most relevant profile chunks retrieved for this job:
--------------------------------------------------------
+4) Most relevant resume chunks retrieved for this job (RAG over the current resume):
+------------------------------------------------------------------------------------
 {relevant_chunks_text}
 
 Your job now:
@@ -84,7 +92,7 @@ Your job now:
   - Use realistic, public or dummy data.
   - Produce something that can be shown in interviews (GitHub repo, screenshots, small demo).
 - Make sure project ideas are aligned with this JD (e.g., cloud data pipelines, ETL, Databricks, Snowflake, leadership, etc., depending on the gaps).
-- Prefer using information from the retrieved profile chunks when referring to the candidate's existing strengths and experience.
+- Prefer using information from the retrieved resume chunks when referring to the candidate's existing strengths and experience.
 - Remember: do NOT assume the candidate already has skills that are not in the profile/resume or retrieved chunks; these are learning goals, not current skills.
 
 Output format:

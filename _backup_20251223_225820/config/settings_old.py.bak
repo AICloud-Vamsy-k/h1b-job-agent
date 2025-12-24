@@ -1,0 +1,64 @@
+"""
+Centralized configuration for H1B Job Agent
+Replaces old config.py with better organization
+"""
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# Base paths
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_DIR = PROJECT_ROOT / "data"
+OUTPUT_DIR = PROJECT_ROOT / "output"
+LOGS_DIR = PROJECT_ROOT / "logs"
+
+# Data paths
+UPLOADS_DIR = DATA_DIR / "uploads"
+TEMPLATES_DIR = DATA_DIR / "templates"
+BASE_RESUME_MD = DATA_DIR / "base_resume.md"
+PROFILE_SUMMARY_TXT = DATA_DIR / "profile_summary.txt"
+CURRENT_RESUME_JSON = DATA_DIR / "current_resume.json"
+H1B_SPONSORS_TXT = DATA_DIR / "h1b_sponsors.txt"
+JOBS_SAMPLE_CSV = DATA_DIR / "jobs_sample.csv"
+JOBS_H1B_LIVE_CSV = DATA_DIR / "jobs_h1b_live.csv"
+
+# Output paths
+REPORTS_DIR = OUTPUT_DIR / "reports"
+RESUMES_DIR = OUTPUT_DIR / "resumes"
+PLANS_DIR = OUTPUT_DIR / "plans"
+DAILY_REPORT_CSV = REPORTS_DIR / "daily_report.csv"
+
+# Template paths
+RESUME_TEMPLATE_DOCX = TEMPLATES_DIR / "current_resume_template.docx"
+
+# API Keys
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")  # For LinkedIn scraper
+
+# Email settings
+SMTP_HOST = os.getenv("SMTP_HOST", "smtp.gmail.com")
+SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
+EMAIL_USER = os.getenv("EMAIL_USER")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+REPORT_RECIPIENT = os.getenv("REPORT_RECIPIENT", EMAIL_USER)
+
+# Job search settings
+JOB_SEARCH_KEYWORDS = os.getenv("JOB_KEYWORDS", "Data Engineer").split(",")
+JOB_SEARCH_LOCATION = os.getenv("JOB_LOCATION", "United States")
+JOB_SEARCH_PAGES = int(os.getenv("JOB_PAGES", "3"))
+
+# Agent settings
+USE_RAG = os.getenv("USE_RAG", "false").lower() == "true"  # Keep RAG disabled for now
+USE_AI_FILTER = os.getenv("USE_AI_FILTER", "true").lower() == "true"
+TOP_K_MATCHES = int(os.getenv("TOP_K_MATCHES", "10"))
+
+# Logging
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
+LOG_FILE = LOGS_DIR / "agent.log"
+
+# Ensure directories exist
+for directory in [DATA_DIR, OUTPUT_DIR, LOGS_DIR, UPLOADS_DIR, TEMPLATES_DIR, 
+                  REPORTS_DIR, RESUMES_DIR, PLANS_DIR]:
+    directory.mkdir(parents=True, exist_ok=True)

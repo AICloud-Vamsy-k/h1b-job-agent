@@ -1,0 +1,1187 @@
+title,company,location,description,url,source,h1b_eligible,eligibility_reason,search_date
+"Data Engineer, Baseball Systems",Washington Nationals,"Washington, District of Columbia","Our Vision
+
+To become baseball’s highest performing organization — defined by our relentless pursuit of excellence, strengthened by our connection, and fueled by our positive energy.
+
+Our Core Values
+• Joy. We want to be around people that like to have fun. We remain optimistic through the ups and downs, we enjoy the process, and we share in something bigger than ourselves.
+• Humility. We don’t have all the answers. We lead with curiosity, listen generously, and seek growth from every experience — especially the tough ones. We have gotten over ourselves.
+• Integrity. We do the right thing, even when it’s hard. We act with honesty, accountability, and respect for our teammates and ourselves. We treat the custodian like the king.
+• Competitiveness. We embrace challenges and thrive in high-stakes environments. We prepare relentlessly. We are energized by the idea of keeping score.
+
+Position Summary
+
+The Washington Nationals are seeking a software engineer focused on data engineering and infrastructure to join our Baseball Systems team. The data engineer will help ensure our datasets are well organized and accessible for our R&D analysts and other stakeholders in Baseball Operations. We are looking for candidates who are passionate about building impactful solutions around data workflows and enthusiastic about working in a baseball front office.
+
+The Washington Nationals Baseball R&D group is responsible for deriving insights from our baseball datasets and building proprietary metrics and data products which are used to inform baseball decision making and processes throughout our organization. As a data engineer in the Baseball Systems group, you’ll have the opportunity to work with large, novel baseball datasets including video, pitch tracking, bat tracking, player tracking, biomechanical data, and performance data (i.e. from force plates, pressure mats, or wearable tech). These datasets present interesting engineering challenges given both the size of the datasets and the need to store the data in ways that are easy to access and use.
+
+We prefer candidates who are willing to relocate to Washington, DC area for in person work at Nationals Park, but we are willing to consider a fully remote option for exceptional candidates.
+
+Essential Duties and Responsibilities:
+• Build robust data pipelines and ETL processes that pull data from a variety of sources (HTTP APIs, cloud object stores like AWS S3, relational databases) and write to our internal data systems
+• Assist with the deployment, orchestration, and monitoring of our data pipelines and machine learning pipelines. We use Prefect for orchestration, utilizing AWS Fargate on ECS
+• Design and build solutions to make working with our internal datasets easier. This work includes maintaining database tables and views, building out our Apache Iceberg data lakehouse, merging datasets from different sources into consistent formats, and building internal APIs to make data more accessible
+• Develop validation processes to monitor data quality and flag potential sources of error
+• Assist with the maintenance of our cloud computing infrastructure: manage and configure servers, databases, and other systems
+• Research and advocate for any new tooling that can aide in timely, accurate and accessible data delivery
+
+Requirements:
+
+Minimum Education and Experience Requirements
+• Bachelor’s degree in computer science, computer engineering, information science, or a related field
+• 4+ years of relevant work experience
+
+Knowledge, Skills, and Abilities necessary to perform essential functions
+• Fluency in Python and SQL
+• Experience with orchestration tools (e.g Prefect, Airflow, Dagster, etc.)
+• Proficient with MySQL, PostgreSQL, DuckDB, or other relational database systems
+• Experience with AWS or other cloud providers
+• Some experience with Terraform and/or Ansible is a plus
+• Comfortable working on the command line in a Linux environment
+• Ability to work independently with close attention to detail
+• Enthusiastic about working in baseball
+• Authorized to work in the United States
+
+Physical/Environmental Requirements
+• Office: Working conditions are normal for an office environment. Work may require occasional weekend and/or evening work
+
+Our Technical Stack
+• Languages: Python, SQL, R (Analytics/ML)
+• Orchestration & Compute: Prefect, AWS ECS (Fargate), AWS Batch
+• Storage & Databases: PostgreSQL, MySQL, MongoDB, AWS S3
+• Modern Data Architecture: Apache Iceberg, Trino, DuckDB
+• Infrastructure & DevOps: Terraform, Ansible, GitLab CI/CD, Ubuntu Linux
+
+Compensation:
+
+The projected annual salary range for this position is $130,000 - $150,000 per year. Actual pay is based on several factors, including but not limited to the applicant’s: qualifications, skills, expertise, education/training, certifications, and other organization requirements. Starting salaries for new employees are frequently not at the top of the applicable salary range.
+
+Benefits:
+
+The Nationals offer a competitive and comprehensive benefits package that presently includes:
+• Medical, dental, vision, life and AD&D insurance
+• Short- and long-term disability insurance
+• Flexible spending accounts
+• 401(k) and pension plan
+• Access to complimentary tickets to Nationals home games
+• Employee discounts
+• Free onsite fitness center
+
+Equal Opportunity Employer:
+
+The Nationals are dedicated to offering equal employment and advancement opportunities to all individuals regardless of their race, color, religion, national origin, sex, age, marital status, personal appearance, sexual orientation, gender identity or expression, family responsibilities, matriculation, political affiliation, genetic information, disability, or any other protected characteristic under applicable law.
+
+Equal Opportunity Employer
+
+This employer is required to notify all applicants of their rights pursuant to federal employment laws.
+For further information, please review the Know Your Rights notice from the Department of Labor.",https://www.teamworkonline.com/baseball-jobs/washington-nationals/washington-nationals/data-engineer-baseball-systems-2148173?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not explicitly state any requirements for U.S. citizenship or permanent residency, nor does it mention any restrictions on visa sponsorship. There are no indications that H1B visa holders would be excluded from applying.",2025-12-23 20:15
+Distinguished Data Engineer,Capital One,"University Park, Maryland","Distinguished Data Engineer
+
+Distinguished Data Engineers are individual contributors who strive to be diverse in thought so we visualize the problem space. At Capital One, we believe diversity of thought strengthens our ability to influence, collaborate and provide the most innovative solutions across organizational boundaries. Distinguished Engineers will significantly impact our trajectory and devise clear roadmaps to deliver next generation technology solutions.
+• Deep technical experts and thought leaders that help accelerate adoption of the very best engineering practices, while maintaining knowledge on industry innovations, trends and practices
+• Visionaries, collaborating on Capital One’s toughest issues, to deliver on business needs that directly impact the lives of our customers and associates
+• Role models and mentors, helping to coach and strengthen the technical expertise and know-how of our engineering and product community
+• Evangelists, both internally and externally, helping to elevate the Distinguished Engineering community and establish themselves as a go-to resource on given technologies and technology-enabled capabilities
+
+The Distinguished Data Engineering role will be responsible for the architectural design and technical patterns that enable a high-performing, reliable data platform for Card authorizations. The focus of the work includes advancing data observably, the Spend Data Product, data standardization, and the core data pipelines that power authorization processing and decisioning. The role is expected to be hands-on, partnering closely with engineering teams and authorization's partners to help drive work forward.
+
+Responsibilities:
+• Build awareness, increase knowledge and drive adoption of modern technologies, sharing consumer and engineering benefits to gain buy-in
+• Strike the right balance between lending expertise and providing an inclusive environment where others’ ideas can be heard and championed; leverage expertise to grow skills in the broader Capital One team
+• Promote a culture of engineering excellence, using opportunities to reuse and innersource solutions where possible
+• Effectively communicate with and influence key stakeholders across the enterprise, at all levels of the organization
+• Operate as a trusted advisor for a specific technology, platform or capability domain, helping to shape use cases and implementation in an unified manner
+• Lead the way in creating next-generation talent for Tech, mentoring internal talent and actively recruiting external talent to bolster Capital One’s Tech talent
+
+Basic Qualifications:
+• Bachelor’s Degree
+• At least 7 years of experience in data engineering
+• At least 3 years of experience in data architecture
+• At least 2 years of experience building applications in AWS
+
+Preferred Qualifications:
+• Masters’ Degree
+• 9+ years of experience in data engineering
+• 3+ years of data modeling experience
+• 2+ years of experience with ontology standards for defining a domain
+• 2+ years of experience using Python, SQL or Scala
+• 1+ year of experience deploying machine learning models
+• 3+ years of experience implementing big data processing solutions on AWS (S3, DynamoDB, Lambda, Glue, Flink)
+• 2+ years of experience with Orchestration Technologies (Airflow, Step functions)
+• 2+ years of experience with Caching and In-memory Data stores
+
+Capital One will consider sponsoring a new qualified applicant for employment authorization for this position
+
+The minimum and maximum full-time annual salaries for this role are listed below, by location. Please note that this salary information is solely for candidates hired to perform work within one of these locations, and refers to the amount Capital One is willing to pay at the time of this posting. Salaries for part-time roles will be prorated based upon the agreed upon number of hours to be regularly worked.
+
+Chicago, IL: $239,900 - $273,800 for Distinguished Data Engineer
+
+McLean, VA: $263,900 - $301,200 for Distinguished Data Engineer
+
+Richmond, VA: $239,900 - $273,800 for Distinguished Data Engineer
+
+Candidates hired to work in other locations will be subject to the pay range associated with that location, and the actual annualized salary amount offered to any candidate at the time of hire will be reflected solely in the candidate’s offer letter.
+
+This role is also eligible to earn performance based incentive compensation, which may include cash bonus(es) and/or long term incentives (LTI). Incentives could be discretionary or non discretionary depending on the plan.
+
+Capital One offers a comprehensive, competitive, and inclusive set of health, financial and other benefits that support your total well-being. Learn more at the Capital One Careers website. Eligibility varies based on full or part-time status, exempt or non-exempt status, and management level.
+
+This role is expected to accept applications for a minimum of 5 business days.
+
+No agencies please. Capital One is an equal opportunity employer (EOE, including disability/vet) committed to non-discrimination in compliance with applicable federal, state, and local laws. Capital One promotes a drug-free workplace. Capital One will consider for employment qualified applicants with a criminal history in a manner consistent with the requirements of applicable laws regarding criminal background inquiries, including, to the extent applicable, Article 23-A of the New York Correction Law; San Francisco, California Police Code Article 49, Sections 4901-4920; New York City’s Fair Chance Act; Philadelphia’s Fair Criminal Records Screening Act; and other applicable federal, state, and local laws and regulations regarding criminal background inquiries.
+
+If you have visited our website in search of information on employment opportunities or to apply for a position, and you require an accommodation, please contact Capital One Recruiting at 1-800-304-9102 or via email at RecruitingAccommodation@capitalone.com. All information you provide will be kept confidential and will be used only to the extent required to provide needed reasonable accommodations.
+
+For technical support or questions about Capital One's recruiting process, please send an email to Careers@capitalone.com
+
+Capital One does not provide, endorse nor guarantee and is not liable for third-party products, services, educational tools or other information available through this site.
+
+Capital One Financial is made up of several different entities. Please note that any position posted in Canada is for Capital One Canada, any position posted in the United Kingdom is for Capital One Europe and any position posted in the Philippines is for Capital One Philippines Service Corp. (COPSSC).",https://jobs.womenforhire.com/job/usa/university-park-md/distinguished-data-engineer-797154/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions against H1B visa holders, such as requirements for a Green Card or permanent US work authorization. There are no statements indicating that visa sponsorship is unavailable. Therefore, it can be inferred that H1B visa holders are eligible for this position.",2025-12-23 20:15
+Technology and Operations - Data Engineer,Anblicks,"Rose Hill, Virginia","Job Title: Technology and Operations - Data Engineer
+
+Location: Sterling - 45580 Terminal Drive_US28-Virginia
+
+We are looking for a seasoned Data Engineer with a strong foundation in big data technologies and a growing proficiency in AI/ML systems. This individual will bring deep expertise in large-scale data processing frameworks (both open-source and proprietary), OLAP/OLTP systems, and real-time data streaming. The ideal candidate will also demonstrate a passion for enabling AI-driven solutions through robust, scalable data infrastructure.
+
+Key Responsibilities:
+
+• Design, develop, and maintain highly scalable, fault-tolerant real-time, near real-time, and batch data pipelines.
+
+• Implement data quality checks, validation, and cleaning processes to ensure high data accuracy and integrity.
+
+• Continuously monitor and optimize data pipelines and databases for performance, resource utilization, and cost efficiency.
+
+• Uphold high standards in code quality, testing, and documentation.
+
+• Mentor junior data engineers and provide technical leadership within the team.
+
+• Perform exploratory and quantitative analytics, data mining, and discovery to support AI/ML initiatives.
+
+• Collaborate with data analysts and business stakeholders to make data accessible and actionable.
+
+• Participate in 24x7 platform support rotations as needed.
+
+Required Qualifications:
+
+• Bachelor’s degree or higher in Computer Science or a related field.
+
+• 7+ years of experience in data engineering roles.
+
+• Proficiency in programming languages such as Scala, Python, or Java.
+
+• Expertise in distributed data processing frameworks like Apache Spark or Flink.
+
+• Experience with stream processing systems such as Kafka or Kinesis.
+
+• Strong knowledge of cloud platforms (e.g., AWS) and cloud-native data platforms like Databricks, Snowflake, or Redshift.
+
+• Solid understanding of SQL, schema design, dimensional modeling, and ETL best practices.
+
+• Experience with workflow orchestration tools such as Apache Airflow.
+
+• Familiarity with CI/CD pipelines, preferably GitHub Actions.
+
+• Strong technical documentation and issue-tracking skills.
+
+• Experience with analytics tools such as Looker or Tableau.
+
+• Demonstrated ability to adopt and integrate new technologies.
+
+• Experience in direct-to-consumer digital businesses is a plus.
+
+Preferred Qualifications:
+
+• Familiarity with statistical modeling libraries (e.g., Scikit-learn, XGBoost, TensorFlow).
+
+• Experience with AI/ML frameworks such as TensorFlow, PyTorch, or Scikit-learn.
+
+• Exposure to GenAI technologies, including LLMs and RAG pipelines.",https://www.linkedin.com/jobs/view/technology-and-operations-data-engineer-at-anblicks-4345893234?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or Green Card holders are eligible, nor does it mention that no sponsorship is available. Therefore, H1B visa holders are likely eligible for this position.",2025-12-23 20:15
+Mid Data Engineer,Booz Allen Hamilton,"Alexandria, Virginia","Job Number: R0230189
+
+Data Engineer, Mid
+The Opportunity
+Do you want to work at the forefront of advanced technology and solve complex data challenges? You know that data yields pivotal insights when it's gathered from disparate sources and organized. As a data engineer, you have the chance to develop and deploy the pipelines and platforms that make this data meaningful. What's more, you'll have the chance to grow Booz Allen's DataOps capab ilities while working with a multi-disciplinary team of analysts, data engineers, data scientists, developers, and data consumers in a fast-paced, agile environment.
+
+We're looking for someone like you to ensure our clients meet their mission by impacting a results-driven national security organization. This is an opportunity to support data engineering activities on some of the most mission-driven projects in the industry. Driving innovation, you'll have the chance to architect data systems, stand up data platforms, build out ETL pipelines, write custom code, interface with data stores, perform data ingestion, and build data models. Perform analytical exploration and examination of data. Lead the assessment, design, building, and maintenance of scalable platforms. Guide your clients to solve their most pressing challenges. Ready to drive innovation using cutting-edge data tools and techniques?
+
+Join us. The world can't wait.
+
+You Have:
+• 3+ years of experience utilizing programming languages, including Python, SQL, and PySpark
+• 2+ years of experience with building, maintaining, and developing production data pipeline tools including Apache Airflow or Luigi
+• 2+ years of experience developing and maintaining scalable data stores that supply big data in forms needed for business analysis
+• Experience creating sof tware for retrieving, parsing and processing structured and unstructured data
+• Experience with developing scalable ETL / ELT workflows for reporting and analytics
+• Experience with secure data transfer protocols and working within and across government network environments, including NIPR, SIPR or JWICS
+• Experience creating solutions within a collaborative, cross-functional team environment
+• Ability to develop scripts and programs for converting various types of data into usable formats and support project team to scale, monitor and operate data platforms
+• TS / SCI clearance
+• Bachelor's degree
+
+Nice If You Have:
+• Experience with distributed data and computing tools such as Spark, Databricks, Hadoop, Hive, AWS EMR, or Kafka
+• Experience with geospatial data formats, including Shapefile, GeoJSON, or KML
+• Experience with geospatial processing libraries, including GDAL, Geopandas, or PostGIS
+• Experience with a public cloud, including AWS, Micro sof t Azure, or Google Cloud
+• Experience with Version Control, including Git and collaborative development workflows
+• Experience working on real-time data and streaming applications
+• Experience with NoSQL implementation using MongoDB or Cassandra
+• Experience with data warehousing, including AWS Redshift, MySQL, or Snowflake
+• Experience with Agile engineering practices
+• TS/SCI clearance with a polygraph
+
+Clearance :
+
+Applicants selected will be subject to a security investigation and may need to meet eligibility requirements for access to classified information ; TS/SCI clearance is required.
+
+Compensation
+
+At Booz Allen, we celebrate your contributions, provide you with opportunities and choices, and support your total well-being. Our offerings include health, life, disability, financial, and retirement benefits, as well as paid leave, professional development, tuition assistance, work-life programs, and dependent care. Our recognition awards program acknowledges employees for exceptional performance and superior demonstration of our values. Full-time and part-time employees working at least 20 hours a week on a regular basis are eligible to participate in Booz Allen's benefit programs. Individuals that do not meet the threshold are only eligible for select offerings, not inclusive of health benefits. We encourage you to learn more about our total benefits by visiting the Resource page on our Careers site and reviewing Our Employee Benefits page.
+
+Salary at Booz Allen is determined by various factors, including but not limited to location, the individual's particular combination of education, knowledge, skills, competencies, and experience, as well as contract-specific affordability and organizational requirements. The projected compensation range for this position is $62,000.00 to $141,000.00 (annualized USD). The estimate displayed represents the typical salary range for this position and is just one component of Booz Allen's total compensation package for employees. This posting will close within 90 days from the Posting Date.
+
+Identity Statement
+
+As part of the application process, you are expected to be on camera during interviews and assessments. We reserve the right to take your picture to verify your identity and prevent fraud.
+
+Work Model
+Our people-first culture prioritizes the benefits of flexibility and collaboration, whether that happens in person or remotely.
+• If this position is listed as remote or hybrid, you'll periodically work from a Booz Allen or client site facility.
+• If this position is listed as onsite, you'll work with colleagues and clients in person, as needed for the specific role.
+
+Commitment to Non-Discrimination
+
+All qualified applicants will receive consideration for employment without regard to disability, status as a protected veteran or any other status protected by applicable federal, state, local, or international law.",https://www.dice.com/job-detail/55bf5c7f-624f-485b-a74a-1f803bc79f4c?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions against H1B visa holders, such as requirements for U.S. citizenship or permanent residency, nor does it mention that visa sponsorship is unavailable. Therefore, it is reasonable to conclude that H1B visa holders are eligible for this position.",2025-12-23 20:15
+Data Engineer I,Chewy,"Boston, Massachusetts","Our Opportunity:
+
+Chewyʼs AI & Data organization is seeking a Data Engineer I to join the Enterprise Data Systems (EDS) team. EDS powers the trusted, governed, and intelligent data foundation that fuels analytics, machine learning, and AI across Chewy.
+As a Data Engineer I, youʼll build your skills as an apprentice data builder—learning how to design, test, and deliver the data pipelines that make insights and AI possible. Youʼll work closely with experienced engineers to gain deep exposure to Chewyʼs modern data stack, Snowflake, dbt Cloud, Kafka, AWS, and Tableau, while developing your technical and problem-solving foundation.
+Weʼre looking for teammates who are endlessly curious, passionate about learning, and excited about how data and AI can transform customer and business experiences.
+
+What You'll Do:
+• • Build and maintain small-scale ingestion and transformation pipelines under mentorship from senior engineers.
+• Write clean, well-documented SQL and Python for data preparation, validation, and automation.
+• Learn and apply dbt Cloud modeling concepts for structured, testable, and auditable data development.
+• Monitor data quality and pipeline performance; assist in triaging and resolving basic issues.
+• Participate in code reviews to understand design principles, version control, and testing best practices.
+• Collaborate with analytics and data science teams to deliver well-structured, reliable datasets.
+• Grow familiarity with Kafka streaming, data observability, and cloud infrastructure fundamentals.
+• Maintain documentation for data catalog and objects you own; contribute basic unit tests for pipeline code.
+• Continuously learn about AI, automation, and how they are reshaping data engineering.
+
+What You'll Need:
+• 0-2 years of professional experience in data engineering, analytics engineering, or a related technical field.
+• Proficiency in SQL and working familiarity with Python.
+• Basic understanding of cloud data warehouses (Snowflake, Redshift, or BigQuery preferred).
+• Working familiarity with Terraform so you can read modules and safely make small, reviewed plan/apply changes (variables, remote state) toAWS/Snowflake resources under mentorship.
+• Curiosity about dbt, Kafka, and modern orchestration frameworks.
+• A learning mindset with a passion for AI, data-driven decision-making, and continuous improvement.
+• Clear communication, eagerness to ask questions, and openness to feedback.
+
+Why You'll Love This Role:
+• Learn directly from experience data engineers in a collaborative, AI-driven environment.
+• Gain hands-on experience with one of the most modern enterprise data stacks in retail.
+• Contribute to projects that power real business insights and customer experiences.
+• Build a foundation for a long-term career in data, AI, and intelligent systems.
+
+The specific salary offered to a candidate may be influenced by a variety of factors including but not limited to the candidate’s relevant experience, education, and work location. In addition, this position is eligible for 401k and a new hire and annual equity grant.
+
+We offer different types of insurance and benefits, such as medical/Rx, vision, dental, life, disability, hospital indemnity, critical illness, and accident. We offer parental leave, family services benefits, backup dependent care, flexible spending accounts, telemedicine, pet adoption reimbursement, employee assistance program, and many discounts including 10% off pet insurance and 20% off at Chewy.com.
+
+Exempt salary team members have unlimited PTO, subject to manager approval. Team members will receive six paid holidays per year. Team members may be eligible for paid sick and family leave in compliance with applicable state and local regulations.
+
+Base Salary Range
+$96,000—$153,500 USD
+
+Chewy is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, ancestry, national origin, gender, citizenship, marital status, religion, age, disability, gender identity, results of genetic testing, veteran status, as well as any other legally-protected characteristic. If you have a disability under the Americans with Disabilities Act or similar law, and you need an accommodation during the application process or to perform these job requirements, or if you need a religious accommodation, please contact CAAR@chewy.com.
+
+To access Chewy's Customer Privacy Policy, please click here.
+
+To access Chewy's California CPRA Job Applicant Privacy Policy, please click here.",https://careers.chewy.com/us/en/job/7439025/Data-Engineer-I?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or permanent residents are eligible, nor does it mention that no sponsorship is available. Therefore, H1B visa holders are likely eligible for this position.",2025-12-23 20:15
+Principal Data Engineer,PepsiCo,"Plano, Texas","Overview
+
+As a member of the data engineering team, you will be the key technical expert developing and overseeing PepsiCo's data product build & operations and drive a strong vision for how data engineering can proactively create a positive impact on the business. You'll be an empowered member of a team of data engineers who build data pipelines into various source systems, rest data on the PepsiCo Data Lake, and enable exploration and access for analytics, visualization, machine learning, and product development efforts across the company. As a member of the data engineering team, you will help lead the development of very large and complex data applications into public cloud environments directly impacting the design, architecture, and implementation of PepsiCo's flagship data products
+
+Responsibilities
+• Active contributor to code development in projects and services
+• Manage and scale data pipelines from internal and external data sources to support new product launches and drive data quality across data products
+• Build and own the automation and monitoring frameworks that captures metrics and operational KPIs for data pipeline quality and performance
+• Responsible for implementing best practices around systems integration
+• Security, performance and data management
+• Empower the business by creating value through the increased adoption of data
+• Data science and business intelligence landscape
+• Collaborate with internal clients (data science and product teams) to drive solutioning and POC discussions
+
+Compensation and Benefits:
+• The expected compensation range for this position is between $89,000 - $149,000
+• Location, confirmed job-related skills, experience, and education will be considered in setting actual starting salary. Your recruiter can share more about the specific salary range during the hiring process
+• Bonus based on performance and eligibility target payout is 10% of annual salary paid out annually
+• Paid time off subject to eligibility, including paid parental leave, vacation, sick, and bereavement
+• In addition to salary, PepsiCo offers a comprehensive benefits package to support our employees and their families, subject to elections and eligibility: Medical, Dental, Vision, Disability, Health, and Dependent Care Reimbursement Accounts, Employee Assistance Program (EAP), Insurance (Accident, Group Legal, Life), Defined Contribution Retirement Plan
+
+Qualifications
+• 6+ years of overall technology experience that includes at least 4+ years of hands-on software development, data engineering, and systems architecture.
+• 4+ years of experience with Data Lake Infrastructure, Data Warehousing, and Data Analytics tools.
+• 4+ years of experience in SQL optimization and performance tuning, and development experience in programming languages like Python, PySpark, Scala etc.).
+• 2+ years in cloud data engineering experience in Azure(Azure Data Factory(ADF), ADLS-2, Databricks(Lakehouse, Workflow SQL, Unity catalog).
+• Fluent with Azure cloud services. Azure or Databricks Certification is a plus.
+• Experience with integration of multi cloud services with on-premises technologies.
+• Experience with data modeling, data warehousing, and building high-volume ETL/ELT pipelines.
+• Experience with data profiling and data quality tools like Apache Griffin, Deequ, and Great Expectations.
+• Experience building/operating highly available, distributed systems of data extraction, ingestion, and processing of large data sets.
+• Experience with at least one MPP database technology such as Redshift, Synapse or SnowFlake.
+• Experience with running and scaling applications on the cloud infrastructure and containerized services like Kubernetes.
+• Experience with version control systems like Github and deployment & CI tools.
+• Experience with Azure Data Factory, Azure Databricks and Azure Machine learning tools.
+• Experience with Statistical/ML techniques is a plus.
+• Experience with building solutions in the Supply chain space(Digital Procurement, Manufacturing, Cost, Warehouse, Network Design) is a plus.
+• Understanding of metadata management, data lineage, and data glossaries is a plus.
+• Working knowledge of agile development, including DevOps and DataOps concepts.
+• Familiarity with business intelligence tools (such as PowerBI).
+
+EEO Statement
+
+All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, protected veteran status, or disability status.
+
+PepsiCo is an Equal Opportunity Employer: Female / Minority / Disability / Protected Veteran / Sexual Orientation / Gender Identity
+
+If you'd like more information about your EEO rights as an applicant under the law, please download the available EEO is the Law & EEO is the Law Supplement documents. View PepsiCo EEO Policy.
+
+Please view our Pay Transparency Statement",https://www.pepsicojobs.com/main/jobs/399518?lang=en-us&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or Green Card holders are eligible, nor does it mention that no sponsorship is available. Therefore, H1B visa holders are likely eligible for this position.",2025-12-23 20:15
+"Data Engineer 2 (Hybrid - Seattle, WA)",Nordstrom,"Seattle, Washington","The Store Selling Insights Delivery Team delivers data and insights that enables Nordstrom Data Analysts, Data Scientists, Leaders, Store Personnel and other business stakeholders to drive the critical Nordstrom customer experiences in a single place, near real-time.
+
+As a Data Engineer 2 on our team, you will own the design and development of highly scalable software applications, services, data pipelines and database solutions, apply scientific, mathematical and social principles, and deliver on the Nordstrom strategic visions. You will have various avenues to collaborate and influence several other platforms within Nordstrom Technology and have a companywide impact on both business and engineering. The ideal candidate is creative, customer-driven and has a passion for data engineering and products.
+
+This role is offered as hybrid in Seattle, WA. Candidates must be available to work in office at the Nordstrom corporate headquarters a minimum of 4 days/week to be considered for this position.
+
+Read this first: We encourage you to apply even if you do not meet all the qualifications but feel you would be a good fit for the position. Nordstrom is an equal-opportunity employer. We are building a diverse, inclusive workforce and hope you will join us!
+
+A day in the life…
+• Design and develop scalable and durable data analytical solutions using in-house and modern technologies for business in an agile environment.
+• Understand the specific needs of a major line of business and the related set of applications, systems, or functions.
+• Design and develop distributed data processing pipelines in the Big Data ecosystem in the Cloud, apply data concept, modeling, structures, and infrastructure technologies and adhere to good engineering practices.
+• Own responsibility for code reviews and drive accountability in following software engineering principles.
+• Build testing tools and CI/CD pipeline, reduce automation friction to speed up the path to business outcomes.
+• Identify data performance issues and data quality issues and optimize the solution.
+• Perform on-going production support and on-call support duties. Work with both onsite and offshore resources daily to resolve any incidents and issues.
+• Responsible for cost savings, production notifications, alerts, and logging dashboards.
+• Collaborate with Product Managers, Data Analysts, Data Scientists, business partners and other tech teams. Partner with analyst stakeholders toward delivering highly effective self-service BI solutions.
+• Communicate clearly and efficiently with our partner teams.
+
+You own this if you have…
+• Bachelor’s or Master's degree in Computer Science, Engineering, or equivalent practical experience required.
+• 3+ years of experience in at least one modern programming language such as Java or Python
+• 2+ years of experience with databases, SQL, data modeling, data mining, and automated engineering solutions. Familiarity with GCP BigQuery or Teradata is a plus.
+• Experience with cloud environments such as AWS, GCP.
+• Experience in developing near real-time distributed data processing solutions using Kafka, Flink, Spark, Kubernetes, Airflow.
+• Experience in scalable distributed systems, service-oriented and event-driven streaming architecture.
+• Experience with best practices for data engineering and operational excellence.
+• Passion for innovative technologies, operational excellence, and customer impact.
+
+We’ve got you covered…
+
+Our employees are our most important asset and that’s reflected in our benefits. Nordstrom is proud to offer a variety of benefits to support employees and their families, including:
+• Medical/Vision, Dental, Retirement and Paid Time Away
+• Life Insurance and Disability
+• Merchandise Discount and EAP Resources
+
+A few more important points...
+
+The job posting highlights the most critical responsibilities and requirements of the job. It’s not all-inclusive. There may be additional duties, responsibilities and qualifications for this job.
+
+For Los Angeles or San Francisco applicants: Nordstrom is required to inform you that we conduct background checks after conditional offer and consider qualified applicants with criminal histories in a manner consistent with legal requirements per Los Angeles, Cal. Muni. Code 189.04 and the San Francisco Fair Chance Ordinance. For additional state and location specific notices, please refer to the Legal Notices document within the FAQ section of the Nordstrom Careers site.
+
+Applicants with disabilities who require assistance or accommodation should contact the nearest Nordstrom location, which can be identified at www.nordstrom.com.
+
+Please be mindful that there may be legal notices and requirements related to this job posting that are specific to your state. Review the Career Site FAQ’s for relevant information and guidelines.
+
+© 2022 Nordstrom, Inc
+
+Current Nordstrom employees: To apply, log into Workday, click the Careers button and then click Find Jobs.
+
+Nordstrom keeps job postings open for at least one day after the posting date.
+
+Pay Range Details
+
+The pay range(s) below has been provided in compliance with state specific laws. Pay ranges may be different for other locations.
+Pay offers are dependent on the location, as well as job-related knowledge, skills, and experience.
+$121,500.00 - $188,500.00 Annual
+
+This position may be eligible for performance-based incentives/bonuses. Benefits include 401k, medical/vision/dental/life/disability insurance options, PTO accruals, Holidays, and more. Eligibility requirements may apply based on location, job level, classification, and length of employment. Learn more in the Nordstrom Benefits Overview by copying and pasting the following URL into your browser: https://careers.nordstrom.com/pdfs/Ben_Overview_16.pdf",https://careers.nordstrom.com/data-engineer-2-hybrid-seattle-wa/job/633239DCFBE4D22821F36BE6CC17A20B?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not include any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or permanent residents are eligible, nor does it mention that no sponsorship is available. Therefore, it is reasonable to conclude that H1B visa holders are eligible for this position.",2025-12-23 20:15
+Junior Data Collection Engineer,BASF,"None, None","Now hiring! Junior Data Collection Engineer
+
+Austin, TX (On Site)
+
+We are seeking a Junior Data Collection Engineer to join our trinamiX brand group within the BASF team, located in Austin, TX.
+
+Come create innovative solutions with us!
+
+trinamiX, a brand of BASF, is expanding into the United States to develop innovative solutions that unlock previously undiscovered opportunities. Our commitment is to redefine what’s possible by delivering technologies that empower industries, enhance lives, and drive progress through precision and reliability.
+
+We are dedicated to improving decision-making and security with cutting-edge technology. By pioneering advanced sensing technologies, we aim to shape a smarter, more connected future where our solutions pave the way for innovation and growth.
+
+As a Junior Data Collection Engineer you will operate prototype systems to record video data, organize and coordinate a diverse group of models for data collection, and follow instructions from data scientists to ensure the required data is gathered and passed back for analysis.
+
+As a Junior Data Collection Engineer, you create chemistry by...
+• Supporting neural network training by recording video data using prototype sensor systems.
+• Organizing and inviting a diverse group of participants for recordings, including people and masks.
+• Following instructions from data scientists and ensure consistency and quality in all data collected.
+• Collaborating internally across teams, especially with System Test and Data Science.
+
+If you...
+• High school diploma required; technical education or bachelor’s degree preferred (fields such as data science, computer science, or electrical engineering).
+• Experience with Python or Linux preferred.
+• Excellent attention to detail, organization, and communication skills.
+• Good English required; Spanish language skills are a nice-to-have.
+
+Create your own chemistry with you@BASF
+
+At BASF, you will have the chance to do meaningful work towards building a more sustainable future. In addition to competitive compensation and benefits, BASF provides you with access to a wide range of elements to help you be your best. It’s what we call you@BASF . We are committed to providing benefits, programs, and opportunities that support our employees’ overall well-being, personal growth, and a safe, collaborative, and inclusive work environment.
+
+Just some of the many benefits we offer include:
+• Flexible work arrangements whenever possible
+• Highly competitive retirement savings plan with company match and investment options
+• Well-being programs that include comprehensive mental health support for you and your household family members
+• Family forming benefits (fertility, adoption and surrogacy reimbursement, maternity/parental leave, and more)
+• Back-up child and elder care with discount programs for families of all ages and stages
+• Mentoring and career development opportunities that allow you to share, learn, and thrive
+• Matching gifts program that allows you to deepen the impact of your contributions to qualified charities.
+• Employee crisis support for when the unexpected happens
+• Access to our BASF wine cellar, employee discounts, and much more!
+
+About us
+
+As one of the largest chemical companies in North America we have been finding solutions for your everyday needs and addressing the most complex economic, environmental, and sustainability challenges for more than 150 years!
+
+At BASF we empower our employees with the tools, guidance and opportunities they need to advance and succeed in work and life. Giving you the support you need to be your best and fulfill your personal ambitions is what helps us create chemistry. After all, our success is linked to yours. Whatever path you envision, BASF is a great place to build a rewarding, successful career.
+
+Belong to Something Bigger. #belongatBASF
+
+Privacy statement
+
+BASF takes security & data privacy very seriously. We will never request financial information of any kind via email, private text message or direct message on any social medial platform or job board. Furthermore, we will never send a candidate a check for equipment or request any type of payment during the job application process. If you have experienced any of the above, please contact Careers.NorthAmerica@basf.com to report fraud.
+
+Equal employment opportunities
+
+We are an equal opportunity employer, and all qualified applicants will receive consideration for employment without regard to race, age, citizenship, color, religion, sex, marital status, national origin, disability status, gender identity or expression, protected veteran status, or any other characteristic protected by law.
+
+Applicants must be currently authorized to work in the United States on a full-time basis.",https://jobpostings.basf.us/tx-usa/junior-data-collection-engineer/EEF39C574CC848F4AE08BEE28C52A8BA/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or permanent residents are eligible, nor does it mention that visa sponsorship is unavailable. Therefore, H1B visa holders are likely eligible for this position.",2025-12-23 20:15
+Sr. Data Engineer,Bayer,"St. Louis, Missouri","Sr. Data Engineer
+
+Sr. Data Engineer for St. Louis, MO to lead design & implementation of data pipeline architecture; identify data solutions to meet business capability needs & processes; develop & maintain continuous integration processes and infrastructure; facilitate end-to-end pipeline orchestration; write, maintain & review software code; develop architecture & deployment strategy to automate data aggregation; mentor & coach junior team members; drive improvements to internal processes; lead discussions with product management stakeholders; apply agile principles to data engineering projects. Requires Master’s in Applied Computer Science, Computer Information Systems, or closely-related field & 2 yrs experience designing logical & physical models for datasets; building semantic data layers using fit-for-purpose methodologies, including linked data concept and/or resource description framework; working with NoSQL databases, including Google BigQuery for data warehousing; using object-oriented programming languages, including Unix Shell scripting, Python, Spark, and Scala; extracting & transforming information from relational databases, including MySQL and Oracle, to load into cloud-based data lakes and/or warehouses; using Google Cloud Storage & Google Data Proc for data pipeline orchestration; using SQL to create aggregated tables and materialized & virtualized views; using GitHub and/or bitbucket for version control, branching & merging code; and using Jira, AhA and/or Azure DevOps for project management. Will also accept Bachelor’s in said fields & 5 yrs progressive, post-Bachelor’s stated experience. Telecommuting permitted from home office location anywhere in the U.S. Salary Range: Employees can expect to be paid a salary between $142,000.00 to $160,000.00. Additional compensation may include a bonus or commission (if relevant). Additional benefits include health care, vision, dental, retirement, PTO, sick leave, etc. The offered salary may vary within this range based on an applicant’s location, market data/ranges, an applicant’s skills and prior relevant experience, certain degrees and certifications, and other relevant factors. Mail resume to Cascinda Fischbeck, Bayer Research and Development Services LLC, 800 N. Lindbergh Blvd., E2NE, St. Louis, MO 63167 or email resume to careers_us@bayer.com. Include reference code below with resume.
+
+Bayer Research & Development Services LLC is an Equal Opportunity Employer/Disabled/Veterans
+
+Bayer Research & Development Services LLC is committed to providing access and reasonable accommodations in its application process for individuals with disabilities and encourages applicants with disabilities to request any needed accommodation(s) using the contact information below.
+
+If you meet the requirements of this unique opportunity, and want to impact our mission Science for a better life, we encourage you to apply now. Job postings will remain open for a minimum of ten business days and are subject to immediate closure thereafter without additional notice.
+
+Division:
+Crop Science
+Reference Code
+858546
+
+Functional Area:
+Biotech
+Location:
+St. Louis, MO
+
+Employment Type:
+Regular
+Position Grade:
+
+Contact Us
+
+Address
+Telephone
+
+Creve Coeur, MO
+
+63167
+
+OR
+
+careers_us@bayer.com",https://talent.bayer.com/careers/job/562949975171500-sr-data-engineer-st-louis-missouri-united-states?domain=bayer.com&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions against H1B visa holders, such as ""Green Card required,"" ""US Citizen only,"" or ""No visa sponsorship."" There are no statements indicating that sponsorship is unavailable, nor are there any requirements for permanent US work authorization. Therefore, it is reasonable to conclude that H1B visa holders are eligible for this position.",2025-12-23 20:15
+Databricks Data Engineer - Senior - Consulting - Location Open,EY,"Tampa, Florida","Location: Anywhere in Country
+
+At EY, we’re all in to shape your future with confidence.
+
+We’ll help you succeed in a globally connected powerhouse of diverse teams and take your career wherever you want it to go. Join EY and help to build a better working world.
+
+Technology – Data and Decision Science – Data Engineering – Senior
+
+We are seeking a highly skilled Senior Consultant Data Engineer with expertise in cloud data engineering, specifically Databricks. The ideal candidate will have strong client management and communication skills, along with a proven track record of successful end-to-end implementations in data engineering projects.
+
+The opportunity
+In this role, you will design and build analytics solutions that deliver significant business value. You will collaborate with other data and analytics professionals, management, and stakeholders to ensure that technical requirements align with business needs. Your responsibilities will include creating scalable data architecture and modeling solutions that support the entire data asset lifecycle.
+
+Your key responsibilities
+
+As a Senior Data Engineer, you will play a pivotal role in transforming data into actionable insights. Your time will be spent on various responsibilities, including:
+• Designing, building, and operating scalable on-premises or cloud data architecture.
+• Analyzing business requirements and translating them into technical specifications.
+• Optimizing data flows for target data platform designs.
+• Design, develop, and implement data engineering solutions using Databricks on cloud platforms (e.g., AWS, Azure, GCP).
+• Collaborate with clients to understand their data needs and provide tailored solutions that meet their business objectives.
+• Lead end-to-end data pipeline development, including data ingestion, transformation, and storage.
+• Ensure data quality, integrity, and security throughout the data lifecycle.
+• Provide technical guidance and mentorship to junior data engineers and team members.
+• Communicate effectively with stakeholders, including technical and non-technical audiences, to convey complex data concepts.
+• Manage client relationships and expectations, ensuring high levels of satisfaction and engagement.
+• Stay updated with the latest trends and technologies in data engineering and cloud computing.
+
+This role offers the opportunity to work with cutting-edge technologies and stay ahead of industry trends, ensuring you gain a competitive advantage in the market. The position may require regular travel to meet with external clients.
+
+Skills and attributes for success
+
+To thrive in this role, you will need a blend of technical and interpersonal skills. Your ability to communicate effectively and build relationships will be crucial. Here are some key attributes we look for:
+• Strong analytical and decision-making skills.
+• Proficiency in cloud computing and data architecture design.
+• Experience in data integration and security.
+• Ability to manage complex problem-solving scenarios.
+
+To qualify for the role, you must have
+• A Bachelor’s degree in Computer Science, Engineering, or a related field required (4-year degree). Master’s degree preferred
+• Typically, no less than 2 - 4 years relevant experience in data engineering, with a focus on cloud data solutions.
+• 5+ years of experience in data engineering, with a focus on cloud data solutions.
+• Expertise in Databricks and experience with Spark for big data processing.
+• Proven experience in at least two end-to-end data engineering implementations, including:
+• Implementation of a data lake solution using Databricks, integrating various data sources, and enabling analytics for business intelligence.
+• Development of a real-time data processing pipeline using Databricks and cloud services, delivering insights for operational decision-making.
+• Strong programming skills in languages such as Python, Scala, or SQL.
+• Experience with data modeling, ETL processes, and data warehousing concepts.
+• Excellent problem-solving skills and the ability to work independently and as part of a team.
+• Strong communication and interpersonal skills, with a focus on client management.
+
+Required Expertise for Senior Consulting Projects:
+• Strategic Thinking: Ability to align data engineering solutions with business strategies and objectives.
+• Project Management: Experience in managing multiple projects simultaneously, ensuring timely delivery and adherence to project scope.
+• Stakeholder Engagement: Proficiency in engaging with various stakeholders, including executives, to understand their needs and present solutions effectively.
+• Change Management: Skills in guiding clients through change processes related to data transformation and technology adoption.
+• Risk Management: Ability to identify potential risks in data projects and develop mitigation strategies.
+• Technical Leadership: Experience in leading technical discussions and making architectural decisions that impact project outcomes.
+• Documentation and Reporting: Proficiency in creating comprehensive documentation and reports to communicate project progress and outcomes to clients.
+
+Ideally, you’ll also have
+• Experience with data quality management.
+• Familiarity with semantic layers in data architecture.
+• Familiarity with cloud platforms (AWS, Azure, GCP) and their data services.
+• Knowledge of data governance and compliance standards.
+• Experience with machine learning frameworks and tools.
+
+What we look for
+
+We seek individuals who are not only technically proficient but also possess the qualities of top performers. You should be adaptable, collaborative, and driven by a desire to achieve excellence in every project you undertake.
+
+FY26NATAID
+
+What we offer you
+At EY, we’ll develop you with future-focused skills and equip you with world-class experiences. We’ll empower you in a flexible environment, and fuel you and your extraordinary talents in a diverse and inclusive culture of globally connected teams. Learn more.
+• We offer a comprehensive compensation and benefits package where you’ll be rewarded based on your performance and recognized for the value you bring to the business. The base salary range for this job in all geographic locations in the US is $106,900 to $176,500. The base salary range for New York City Metro Area, Washington State and California (excluding Sacramento) is $128,400 to $200,600. Individual salaries within those ranges are determined through a wide variety of factors including but not limited to education, experience, knowledge, skills and geography. In addition, our Total Rewards package includes medical and dental coverage, pension and 401(k) plans, and a wide range of paid time off options.
+• Join us in our team-led and leader-enabled hybrid model. Our expectation is for most people in external, client serving roles to work together in person 40-60% of the time over the course of an engagement, project or year.
+• Under our flexible vacation policy, you’ll decide how much vacation time you need based on your own personal circumstances. You’ll also be granted time off for designated EY Paid Holidays, Winter/Summer breaks, Personal/Family Care, and other leaves of absence when needed to support your physical, financial, and emotional well-being.
+
+Are you ready to shape your future with confidence? Apply today.
+EY accepts applications for this position on an on-going basis.
+
+For those living in California, please click here for additional information.
+
+EY focuses on high-ethical standards and integrity among its employees and expects all candidates to demonstrate these qualities.
+
+EY | Building a better working world
+
+EY is building a better working world by creating new value for clients, people, society and the planet, while building trust in capital markets.
+
+Enabled by data, AI and advanced technology, EY teams help clients shape the future with confidence and develop answers for the most pressing issues of today and tomorrow.
+
+EY teams work across a full spectrum of services in assurance, consulting, tax, strategy and transactions. Fueled by sector insights, a globally connected, multi-disciplinary network and diverse ecosystem partners, EY teams can provide services in more than 150 countries and territories.
+
+EY provides equal employment opportunities to applicants and employees without regard to race, color, religion, age, sex, sexual orientation, gender identity/expression, pregnancy, genetic information, national origin, protected veteran status, disability status, or any other legally protected basis, including arrest and conviction records, in accordance with applicable law. 
+
+EY is committed to providing reasonable accommodation to qualified individuals with disabilities including veterans with disabilities. If you have a disability and either need assistance applying online or need to request an accommodation during any part of the application process, please call 1-800-EY-HELP3, select Option 2 for candidate related inquiries, then select Option 1 for candidate queries and finally select Option 2 for candidates with an inquiry which will route you to EY’s Talent Shared Services Team (TSS) or email the TSS at ssc.customersupport@ey.com.",https://careers.ey.com/ey/job/New-York-Databricks-Data-Engineer-Senior-Consulting-Location-Open-NY-10001-8604/1236648701/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or Green Card holders are eligible, nor does it mention that visa sponsorship is unavailable. Therefore, it can be inferred that H1B visa holders are eligible for this position.",2025-12-23 20:15
+Big data Data Engineer - Global Data Analytics,Atria Group LLC,"Silver Spring, Maryland","Company Description
+
+We specialize in Staffing, Consulting, Software Development, and Training along with IT services to small to medium size companies. AG's primary objective is to help companies maximize their IT resources and meet the ever-changing IT needs and challenges.
+
+In addition, AG offers enterprise resource planning and enterprise application integration, supply-chain management, e-commerce solutions, and B2B public exchanges and B2B process integration solutions. Our company provides application analysis, design, development and programming, software engineering, systems development, testing, integration, and implementation, and management consulting services to various clients - including governmental agencies and private companies - throughout the United States and India.
+
+We provide these services in multiple computing environments and use technologies such as client/server architecture, object-oriented programming languages and tools, distributed database management systems, state-of-the-art networking, and communications infrastructures. Our honest and realistic approach to recruiting dictates that AG does not entice or lure engineers from their employers. We represent only high caliber technical professionals who have committed to making a change required by career.
+
+Job Description
+
+Must Have Skills -
+
+Overall 10+ years' experience in Datawarehousing related technologies.
+
+3+ years architecting and managing AWS Big Data products and services such as EMR, RedShift, Data Pipeline and Kinesis
+
+3+ years of working experience with Hadoop-based technologies such as MapReduce, Hive/Pig/Impala and NoSQL Databases
+
+3+ years of extensive working knowledge in different programming or scripting languages like Java, Linux, C++, PHP, Ruby, Python and/or R.
+
+Experience working with unstructured, semi-structured and unstructured data sets including social, weblogs and real-time data feeds
+
+Proficient in designing efficient and robust ETL/ELT workflows
+
+Able to tune Big Data solutions to improve performance and end-user experience
+
+Bachelor's or Master's degree in computer science or software engineering
+
+Knowledge BI and Visualization tools such as MicroStrategy/Tableau is a plus
+
+Experience in the media industry is a plus
+
+Must have the legal right to work in the United States
+
+Additional Information
+
+GOOD COMMUNICATION SKILLS
+
+DURATION: 6 Months
+
+INTERVIEW: PHONE","https://www.ziprecruiter.com/c/Atria-Group-LLC/Job/Big-data-Data-Engineer-Global-Data-Analytics/-in-Silver-Spring,MD?jid=7b5bd2d5926ca00b&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",JSearch,True,"The job posting does not contain any explicit or implicit restrictions against H1B visa holders. There are no statements indicating that only U.S. citizens or permanent residents are eligible, nor does it mention that visa sponsorship is not available. Therefore, it can be interpreted that H1B visa holders are eligible for this position.",2025-12-23 20:15
+Data Engineer - CRM Engineering,Electronic Arts,"Austin, Texas","General Information
+
+Locations: Austin, Texas, United States of America
+• Location: Vancouver
+• Country: Canada
+• Location: Kirkland
+• Country: United States of America
+
+Role ID
+
+212161
+
+Worker Type
+
+Regular Employee
+
+Studio/Department
+
+Other
+
+Work Model
+
+Hybrid
+
+Description & Requirements
+
+Electronic Arts creates next-level entertainment experiences that inspire players and fans around the world. Here, everyone is part of the story. Part of a community that connects across the globe. A place where creativity thrives, new perspectives are invited, and ideas matter. A team where everyone makes play happen.
+
+The Office of the CXO (Chief Experience Officer) is at the forefront of EA's transformation to become a player-first organization. Our CRM Engineering team plays a central role in enabling 1:1, personalized, real-time communication across EA's global ecosystem. This includes omni-channel content delivery through EA.com, email, and in-game messaging, backed by modern MarTech infrastructure and marketing science.
+
+As a Data Engineer – CRM Engineering, reporting to the Technical Director of CRM Engineering, you will be responsible for building and maintaining the data infrastructure that powers EA's AI-driven marketing personalization at scale. You will design and implement robust ETL pipelines, data warehousing solutions, and analytics frameworks that enable real-time player insights, marketing recommendations, and campaign measurement across EA's global player base of hundreds of millions of users.
+
+Responsibilities
+• Design, build, and maintain scalable ETL pipelines to ingest player activity data, marketing interactions, and campaign performance metrics from multiple sources across EA's ecosystem.
+• Develop and optimize a marketing data warehouse architecture that supports real-time analytics, player segmentation, and personalization engines.
+• Implement data quality frameworks, monitoring systems, and automated testing to ensure data accuracy and pipeline reliability.
+• Create and maintain APIs and data services that enable self-service analytics for marketing teams and campaign managers.
+• Build measurement and reporting frameworks that track campaign effectiveness, player engagement metrics, and ROI across channels.
+• Partner with Engineering teams to ensure data infrastructure can scale with EA's growing player base and marketing complexity.
+• Implement data governance practices, including privacy compliance (GDPR, CCPA) and security protocols for sensitive player data.
+• Optimize data storage, query performance, and cost efficiency across cloud-based data platforms.
+
+Qualifications
+
+Required:
+• 5+ years of data engineering experience with focus on large-scale data systems and ETL development
+• Strong proficiency in SQL, Python, and data processing frameworks (Spark, Kafka, Airflow, or similar)
+• Experience with cloud data platforms (AWS Redshift, Snowflake, BigQuery) and modern data stack tools
+• Hands-on experience building and maintaining data pipelines for high-volume, real-time data ingestion
+• Proficiency with data modeling, dimensional modeling, and data warehouse design principles
+• Experience with APIs, microservices, and event-driven data architectures
+• Strong understanding of data quality, monitoring, and observability practices
+• Knowledge of data governance, privacy regulations, and security best practices
+
+Preferred:
+• Experience with marketing data sources (CRM systems, email platforms, web analytics)
+• Familiarity with gaming or entertainment industry data patterns and player behavior analytics
+• Experience with streaming data processing and real-time analytics platforms
+• Knowledge of A/B testing frameworks and experimentation measurement systems
+• Understanding of machine learning data requirements and feature engineering
+• Previous work with consumer-facing applications handling millions of daily active users
+
+Pay Transparency - North America
+
+COMPENSATION AND BENEFITS
+
+The ranges listed below are what EA in good faith expects to pay applicants for this role in these locations at the time of this posting. If you reside in a different location, a recruiter will advise on the applicable range and benefits. Pay offered will be determined based on a number of relevant business and candidate factors (e.g. education, qualifications, certifications, experience, skills, geographic location, or business needs).
+
+PAY RANGES
+• British Columbia (depending on location e.g. Vancouver vs. Victoria) *$119,600 - $167,300 CAD
+• Washington (depending on location e.g. Seattle vs. Spokane) *$129,500 - $171,800 USD
+
+In the US, we offer a package of benefits including paid time off (3 weeks per year to start), 80 hours per year of sick time, 16 paid company holidays per year, 10 weeks paid time off to bond with baby, medical/dental/vision insurance, life insurance, disability insurance, and 401(k) to regular full-time employees. Certain roles may also be eligible for bonus and equity.
+
+In British Columbia, we offer a package of benefits including vacation (3 weeks per year to start), 10 days per year of sick time, paid top-up to EI/QPIP benefits up to 100% of base salary when you welcome a new child (12 weeks for maternity, and 4 weeks for parental/adoption leave), extended health/dental/vision coverage, life insurance, disability insurance, retirement plan to regular full-time employees. Certain roles may also be eligible for bonus and equity.
+
+Pay is just one part of the overall compensation at EA.
+
+In the US, we offer a package of benefits including paid time off (3 weeks per year to start), 80 hours per year of sick time, 16 paid company holidays per year, 10 weeks paid time off to bond with baby, medical/dental/vision insurance, life insurance, disability insurance, and 401(k) to regular full-time employees. Certain roles may also be eligible for bonus and equity.
+
+For British Columbia, we offer a package of benefits including vacation (3 weeks per year to start), 10 days per year of sick time, paid top-up to EI/QPIP benefits up to 100% of base salary when you welcome a new child (12 weeks for maternity, and 4 weeks for parental/adoption leave), extended health/dental/vision coverage, life insurance, disability insurance, retirement plan to regular full-time employees. Certain roles may also be eligible for bonus and equity.
+
+About Electronic Arts
+
+We’re proud to have an extensive portfolio of games and experiences, locations around the world, and opportunities across EA. We value adaptability, resilience, creativity, and curiosity. From leadership that brings out your potential, to creating space for learning and experimenting, we empower you to do great work and pursue opportunities for growth.
+
+We adopt a holistic approach to our benefits programs, emphasizing physical, emotional, financial, career, and community wellness to support a balanced life. Our packages are tailored to meet local needs and may include healthcare coverage, mental well-being support, retirement savings, paid time off, family leaves, complimentary games, and more. We nurture environments where our teams can always bring their best to what they do.
+
+Electronic Arts is an equal opportunity employer. All employment decisions are made without regard to race, color, national origin, ancestry, sex, gender, gender identity or expression, sexual orientation, age, genetic information, religion, disability, medical condition, pregnancy, marital status, family status, veteran status, or any other characteristic protected by law. We will also consider employment qualified applicants with criminal records in accordance with applicable law. EA also makes workplace accommodations for qualified individuals with disabilities as required by applicable law.",https://www.indeed.com/viewjob?jk=ebfbda84737d875f&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not mention any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or permanent residents are eligible, nor does it specify that H1B visa holders are excluded. Therefore, it can be inferred that H1B visa holders are eligible for this position.",2025-12-23 20:15
+Remote Data Engineer,Shuvel,"Oakton, Virginia","Required Skills and Experience:
+• Google Cloud Platform: Experience with GCP services, particularly Cloud Functions, Cloud SQL, BigQuery, and database management.
+• Python Scripting: Capable of automating tasks or developing utilities using Python.
+• ETL Pipelines: Comfortable with data cleaning, transformation, and integration workflows.
+• Ability to design, create, and manage APIs on GCP.
+• Desired Skills: Geospatial Technologies Mapping Libraries: Proficiency with Leaflet and/or Esri technologies.
+• React: Proficiency in React and JavaScript.
+• Frontend: Familiarity with Material-UI (MUI) or U.S. Web Design System (USWDS).",https://jooble.org/jdp/7634337739475239880?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or Green Card holders are eligible, nor does it mention a lack of sponsorship. Therefore, H1B visa holders are likely eligible for this position.",2025-12-23 20:15
+Senior Data Engineer,Tango,"Coppell, Texas","LetsTango!Where Innovation Meets Impact.
+
+AtTango were all about helping businesses make smarter decisions through powerful technology insightful data and a whole lot of collaboration. Whether youre a creative thinker a strategic planner a tech wizard or a customer champion theres a place for you on our team. We believe work should be meaningful and fun so if youre ready to make a difference while enjoying the journey come join us and letsTango!
+
+We are looking for a Senior Data Engineer to join our dynamic and growing R&D team.
+
+About the Role :
+
+We are seeking a highly skilled Senior Data Engineer to own and evolve our data pipelines production databases and overall data quality framework across our enterprise Energy & Sustainability analytics platform. This role will ensure the reliability scalability and integrity of the data powering customer reporting real-time analytics carbon accounting and mission-critical workflows.
+
+You will work closely with Engineering Product Analytics and DevOps teams to design build and continuously improve our data infrastructurespanning ingestion transformation warehousing and quality assurance.
+
+Responsibilities
+
+Data Pipeline Ownership
+
+Design build and maintain scalable ETL / ELT pipelines using AWS-native services (Glue Lambda Step Functions S3).
+
+Develop automated workflows to ingest transform and validate large volumes of structured and semi-structured data.
+
+Monitor pipeline performance reliability and cost efficiency; implement proactive improvements.
+
+Database & Warehouse Management
+
+Manage and optimize production databases (Postgres TimescaleDB) and our OLAP data warehouse (Redshift etc).
+
+Implement database performance tuning indexing strategies query optimizations and schema evolution best practices.
+
+Oversee data retention partitioning and backup / restore strategies.
+
+Data Quality & Governance
+
+Build automated data validation frameworks and anomaly detection.
+
+Establish and enforce data quality SLAs across ingestion and reporting layers.
+
+Maintain metadata lineage and documentation standards to support auditability (SOC 1 / 2 ISO).
+
+Cross-Functional Collaboration
+
+Work with application engineering teams to design APIs microservices and data contracts.
+
+Support Product and Data Analytics teams with curated datasets and high-performance query patterns.
+
+Troubleshoot production issues and improve observability using monitoring and alerting tools (CloudWatch Datadog etc.).
+
+About You :
+
+5 years of professional experience as a Data Engineer or similar role.
+
+Strong expertise with Python and SQL and modern data engineering frameworks.
+
+Deep experience with AWS data services (Glue Lambda Step Functions S3 Redshift RDS / Postgres).
+
+Hands-on experience with ETL / ELT pipeline design orchestration and performance tuning.
+
+Strong experience with production databases (Postgres TimescaleDB etc.).
+
+Solid understanding of data modeling (OLTP OLAP / star schema) warehousing and analytics workloads.
+
+Experience with data quality frameworks validation and monitoring.
+
+Preferred
+
+Experience with time-series data and high-volume ingestion pipelines.
+
+Background in the Energy Sustainability or IoT data domain.
+
+What We Offer
+
+Were committed to creating an environment where you can thriveprofessionally and personally. Our offerings include :
+• Competitive Compensation We recognize and reward your contributions with a salary package that reflects your value.
+• Comprehensive Benefits Including health dental and vision insurance a 401(k) plan with company match and generous paid time off to support your well-being.
+• Flexible Work Environment Whether remote hybrid or in-office we support work arrangements that promote productivity and balance.
+• Inclusive & Collaborative Culture We foster a workplace where diverse perspectives are valued teamwork is encouraged and everyone has a voice.
+
+Tango is proud to be an equal opportunity employer. We are committed to equal opportunity regardless of race ethnicity religion parental status sexual orientation age citizenship disability or veteran status.
+
+Base pay offered is contingent on qualifications and other operational considerations. Base pay is just one piece of the full compensation structure offered at Tango. If this pay range is outside of your expectations we still encourage you to apply and have a conversation with us.
+
+Required Experience :
+
+Senior IC
+
+Key Skills
+
+Apache Hive,S3,Hadoop,Redshift,Spark,AWS,Apache Pig,NoSQL,Big Data,Data Warehouse,Kafka,Scala
+
+Employment Type : Full-Time
+
+Experience : years
+
+Vacancy : 1",https://www.talent.com/view?id=bd129004453c&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions against H1B visa holders, such as ""Green Card required,"" ""US Citizen only,"" or ""No visa sponsorship."" There are no statements indicating that sponsorship is unavailable, and no negative language regarding visa status is present. Therefore, it is reasonable to conclude that H1B visa holders are eligible for this position.",2025-12-23 20:15
+"Data Engineer, Analytics Platform",Penn Interactive,"Philadelphia, Pennsylvania","PENN Entertainment, Inc. is North America's leading provider of integrated entertainment, sports content, and casino gaming experiences. From casinos and racetracks to online gaming, sports betting and entertainment content, we deliver the experiences people want, how and where they want them.
+
+We're always on the lookout for those who are passionate about creating and delivering cutting-edge online gaming and sports media products. Whether it's through Hollywood Casino, theScore Bet Sportsbook, or theScore media app, we're excited to push the boundaries of what's possible. These state-of-the-art platforms are powered by proprietary in-house technology, a key component of PENN's omnichannel gaming and entertainment strategy.
+
+When you join PENN Entertainment's digital team, you'll not only work on these cutting-edge platforms through theScore and PENN Interactive, but you'll also be part of a company that truly cares about your career growth. We're committed to supporting you as you expand your skills and explore new opportunities.
+
+With locations throughout North America, you can build a future at PENN Entertainment wherever you are. If you want to challenge conventions in gaming, media and entertainment, we want to talk to you.
+
+About the Role & Team
+As a Data Engineer, you'll work hand-in-hand with the Data Services team to build, validate and deliver transformed data to meet stakeholder requirements. The ideal candidate has strong SQL skills, a passion for data, a technical background and an interest in professional sports, betting & eSports.
+
+About the Work
+As a key member of our team, you will:
+• Liaise with data engineers to build data pipelines and solve related issues.
+• Use your SQL expertise to develop dbt models.
+• Manage Airflow tasks and scheduling.
+• Assist team members in solving data issues related to both analysis and modeling.
+• Complete analyses and present clear recommendations to business stakeholders.
+• Oversee team's analysis to ensure data and insights shared are accurate and informative.
+• Help with implementation & adoption of a data exploration tool across the organization
+• Provide support on data engineer hiring, onboarding and continued professional development.
+• Other duties as required
+
+About the You
+• University degree in Computer Science, Statistics, Business, or related field.
+• You possess a minimum of 3 years of experience in analytics engineering/data engineering,
+• You bring hands-on expertise with our technology stack: BigQuery, dbt, Airflow, Python, and relational databases.
+• You have a proven track record in building and optimizing data transformation pipelines
+• You excel in fast-paced environments, employing a pragmatic and adaptive approach to problem-solving.
+• Experience with a data exploration tool such as Looker or Mode.
+• Bonus for: Interest in Sports and consumer products
+
+What We Offer
+• Competitive compensation package
+• Fun, relaxed work environment
+• Education and conference reimbursements.
+• Opportunities for career progression and mentoring others
+
+#LI-REMOTE
+
+#LI-Ret
+
+#LI-Hybrid
+
+Salary Range
+
+$115,000-$160,000 USD
+
+Penn Interactive is proud to be an equal opportunity workplace. We will consider all qualified applicants for employment without regard to race, color, religion, age, sex, sexual orientation, gender identity, national origin, disability, veteran status, genetic information, or any other basis protected by applicable law.Base pay is one part of the Total Rewards that Penn Interactive provides to compensate and recognize employees for their work. Most sales positions are eligible for a Commission under the terms of an applicable plan, while most non-sales positions are eligible for a Bonus. Additionally, Penn Interactive provides best-in-class benefits to eligible employees. We believe that benefits should connect you to the support you need when it matters most, and should help you care for those who matter most. That's why we provide an array of options, expert guidance and always-on tools, that are personalized to meet the needs of your reality - to help support you physically, financially and emotionally through the big milestones and in your everyday life.","https://www.ziprecruiter.com/c/Penn-Interactive/Job/Data-Engineer,-Analytics-Platform/-in-Philadelphia,PA?jid=0d1444e050c8ed53&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or Green Card holders are eligible, nor does it mention that visa sponsorship is unavailable. Therefore, it can be inferred that H1B visa holders are eligible to apply.",2025-12-23 20:15
+ANALYTICS ENGINEER-REMOTE,Compass Group,"None, Texas","ESFM
+• We have an opening for an Analytics Engineer position.
+• Location: Remote with occasional travel Note: online applications accepted only.
+• Schedule:8-5PMCT
+• Pay Range: $115,000- $130,000
+
+ESFM is the corporate Integrated Facilities Management (IFM) division of Compass Group USA and a Keystone member of the International WELL Building Institute (IWBI).
+
+We Make Applying Easy! Want to apply to this job via text messaging? Text JOB to 75000 and search requisition ID number 1480849.
+
+The advertised program is a conversational recruiting assistant that helps you apply to jobs with Compass Group. Message frequency varies. Message and data rates may apply. Text STOP to opt out or HELP for help. Terms and conditions: http://olivia.paradox.ai/moSkg
+
+Rooted in hospitality, ESFM elevates the workplace experience as the single source of innovative FM solutions that ensure a safe, healthy, and sustainable environment. ESFM’s clients include many household names from Life Science, Technology, Oil & Gas and Manufacturing markets.
+
+ESFM self-performs 80% of all IFM solutions provided to clients. Their portfolio of service categories includes Environment, Health & Safety, Facilities Maintenance & Engineering, Sustainability, Janitorial & Industrial Cleaning, Laboratory Support and Workplace solutions. This self-performance model creates a consistent hospitality experience for clients, resulting in higher engagement and productivity from their employees.
+
+In 2020, ESFM (formerly Eurest Services) won the George Graves Award for Facility Management Achievement from the International Facilities Management Association (IFMA).
+
+Job Summary
+
+The Analytics Engineer plays a pivotal role in shaping ESFM’s modern data platform and enabling the business to make better, faster, and more trusted decisions. This role is responsible for designing and maintaining scalable data models in Snowflake, developing robust ELT pipelines with dbt, and enabling consistent analytics across Power BI and Google Looker.
+
+By applying dimensional modeling principles and engineering best practices, the Analytics Engineer will translate business needs into reliable, reusable, and performant data products. This position sits at the intersection of data engineering and business intelligence, ensuring stakeholders have access to clean, governed, and analytics-ready data for self-service insights.
+
+Core Responsibilities
+
+Data Modeling & Transformation
+• Design and maintain dbt models that transform raw data into trusted, analytics-ready datasets.
+• Apply dimensional modeling (Kimball) to build optimized star schemas for reporting and self-service analytics.
+• Implement testing frameworks (dbt tests, unit tests) to ensure data quality and reliability.
+
+Data Integration & ELT
+• Develop and manage automated ELT pipelines in dbt and Snowflake.
+• Integrate new data sources (e.g., ServiceNow, SaaS platforms) and collaborate with data engineers to optimize workflows and orchestration.
+
+Analytics Enablement
+• Build and maintain semantic layers in Power BI and Looker (LookML) for consistent KPIs and definitions.
+• Align data models with business objectives and optimize for performance and ease of use.
+
+Engineering Best Practices
+• Use Git/GitHub for version control and CI/CD tools (e.g., dbt Cloud, GitHub Actions) for safe, automated deployments.
+• Monitor and optimize Snowflake performance, ensuring scalability and cost efficiency.
+• Apply observability practices (logging, query monitoring) to proactively detect and resolve issues.
+
+Collaboration & Governance
+• Partner with analysts, data scientists, and business teams to deliver actionable insights.
+• Communicate technical concepts clearly and promote data governance, documentation, and best practices.
+• Maintain security, access controls, and documentation across data models, pipelines, and BI platforms.
+
+Continuous Improvement
+• Stay current with modern data stack tools and recommend enhancements to improve efficiency and scalability.
+
+Qualifications
+• Bachelor’s degree in Computer Science, Information Systems, Data Engineering, or related field; or equivalent experience.
+• 3+ years of experience in analytics engineering, data engineering, or a related role.
+• Hands-on expertise designing star schemas, fact tables, and conformed dimensions following Kimball best practices
+• Proven hands-on experience with dbt for ELT pipeline development.
+• Strong proficiency with Snowflake, including query optimization and performance tuning.
+• Demonstrated application of Kimball dimensional modeling and star schema design.
+• Experience designing semantic models in Power BI and/or Looker (LookML preferred).
+• Advanced SQL skills with large, complex datasets.
+• Proficiency with Git/GitHub for version control and collaborative workflows.
+• Experience managing multi-environment workflows (dev → staging → prod).
+• Knowledge of data observability, governance, and role-based access security.
+• Certifications or equivalent practical expertise with Snowflake, Google Looker, Power BI, and dbt tools.
+• Excellent communication skills with both technical and business stakeholders.
+• Strong sense of ownership, accountability, and attention to detail.
+
+Preferred / Bonus Skills:
+• Experience implementing CI/CD pipelines for dbt or data engineering workflows.
+• Exposure to Python for scripting, automation, or data integration.
+• Familiarity with ServiceNow data structures or other enterprise SaaS systems.
+• Knowledge of data quality frameworks (e.g., Great Expectations, Monte Carlo, Soda).
+
+Associates at ESFM are offered many fantastic benefits.
+
+Full-time and part-time positions offer the following benefits to associates: Retirement Plan, Associate Shopping Program, Health and Wellness Programs, Discount Marketplace, Identity Theft Protection, Pet Insurance, Voluntary Benefits, including Critical Illness Insurance, Accident Insurance, Hospital Indemnity Insurance, Legal Services, and Choice Auto and Home Program
+
+Full-time positions also offer the following benefits to associates: Medical, Dental, Vision, Life Insurance/AD, Disability Insurance, Commuter Benefits, Employee Assistance Program, Flexible Spending Accounts (FSAs)
+
+Associates may also be eligible for paid and/or unpaid time off benefits in accordance with applicable federal, state, and local laws. For positions in Washington State, Maryland, or to be performed Remotely, click here for paid time off benefits information.
+
+About Compass Group: Achieving leadership in the foodservice and facility management industry
+
+Compass Group is an equal opportunity employer. At Compass, we are committed to treating all Applicants and Associates fairly based on their abilities, achievements, and experience without regard to race, national origin, sex, age, disability, veteran status, sexual orientation, gender identity, or any other classification protected by law.
+
+Qualified candidates must be able to perform the essential functions of this position satisfactorily with or without a reasonable accommodation. Disclaimer: this job post is not necessarily an exhaustive list of all essential responsibilities, skills, tasks, or requirements associated with this position. While this is intended to be an accurate reflection of the position posted, the Company reserves the right to modify or change the essential functions of the job based on business necessity.
+
+Applications are accepted on an ongoing basis.
+
+ESFM maintains a drug-free workplace.
+
+ESFM",https://careers.compass-usa.com/analytics-engineer-remote/job/0138E879CD43C7A15D31357BC4838739?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit requirements that exclude H1B visa holders. There are no statements indicating that only U.S. citizens or permanent residents are eligible, nor does it mention a lack of visa sponsorship. Therefore, it can be inferred that H1B visa holders may apply.",2025-12-23 20:15
+Data Engineer Sr,Munich Re,"Princeton, New Jersey","We're adding to our diverse team of experts and are looking to hire those who are committed to building a culture that enables the creation of innovative solutions for our business units and clients. We will consider a range of experience for this role and the offer will be commensurate with that.
+
+The Company
+
+As a member of Munich Re's US operations, we offer the financial strength and stability that comes with being part of the world's preeminent insurance and reinsurance brand. Our risk experts work together to assemble the right mix of products and services to help our clients stay competitive - from traditional reinsurance coverages, to niche and specialty reinsurance and insurance products.
+
+Job Overview:
+
+We are seeking a highly skilled Senior Data Engineer - Databricks Platform (ML & Feature Engineering Focus) with a strong software engineering background to join our AI/ML Engineering GSI IT Team. In this role, you will be focused on building a Databricks-based data platform that powers machine learning and advanced analytics. This role is ideal for someone who thrives at the intersection of data engineering, ML infrastructure, and software development, and is passionate about enabling scalable, production-grade feature engineering pipelines.
+
+Key Responsibilities:
+• Build and optimize databricks ETL/ELT pipelines for feature extraction, transformation, and loading from structured and unstructured data sources.
+• Collaborate with ML engineers, data scientists, and software developers to deliver reliable, reusable, and versioned feature sets.
+• Implement CI/CD pipelines, testing frameworks, and observability for data workflows.
+• Develop feature stores, metadata tracking, and lineage tools to support data Ops.
+• Ensure data quality, governance, and compliance across all data assets.
+• Optimize performance and cost-efficiency of Databricks clusters and jobs for data workloads.
+• Contribute to the architecture and design of the data platform and feature engineering framework.
+
+Qualifications:
+• Strong proficiency in Python and relevant scripting languages, with experience in software development and scripting for Databricks.
+• Expertise with libraries and frameworks (e.g., Pandas, Numpy, Scikit-Learn, TensorFlow, PyTorch, Databricks, MLFlow, dvc, dbt) and the ability to select the right tools for the use case.
+• Experience building inference endpoints (APIs) and managing compute architecture for efficient model inference and data handling.
+• Very good Azure and data & AI technology skills - specifically: Databricks / Python, Azure Datalake Store, Azure AI Search.
+• Experience with DevOps practices, including Git, CI/CD using tools such as Azure Pipelines, or similar.
+• Several years of experience in machine learning, data science, or a related field, with a strong understanding of statistics and data analysis.
+• Experience with Azure especially with data and ML services, containerization (Docker.
+
+Preferred Qualifications:
+• Advanced Degree: Master's degree in Computer Science, Engineering, Mathematics, with 5+ years of ML implementation experience or Ph.D. with 2+ years of hands-on ML Project experience.
+• Experience with Big Data: Strong proficiency with big data technologies such as Azure Databricks and Spark.
+• Leadership Experience: Previous experience leading a team of data scientists or engineers.
+
+Benefits:
+• Competitive employee benefits, including comprehensive health insurance, dental and sports coverage, and opportunities for certified training.
+• Flexibility in work arrangements, including home office options and flexible working hours.
+• A positive, team-oriented environment that fosters mutual trust, creativity, and initiative.
+• Opportunities for career growth within a global, innovative framework.
+• A diverse, multicultural workplace with a strong emphasis on team collaboration and professional development.
+
+At Munich Re US, we see Diversity and Inclusion as a solution to the challenges and opportunities all around us. Our goal is to foster an inclusive culture and build a workforce that reflects the customers we serve and the communities in which we live and work. We strive to provide a workplace where all of our colleagues feel respected, valued and empowered to achieve their very best every day. We recruit and develop talent with a focus on providing our customers the most innovative products and services.
+
+We are an equal opportunity employer. Reasonable accommodations may be made to enable individuals with disabilities to perform the essential functions.",https://www.theladders.com/job/data-engineer-sr-munichre-princeton-nj_82669159?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or permanent residents are eligible, nor does it mention that visa sponsorship is not available. Therefore, it can be interpreted that H1B visa holders may be considered for this position.",2025-12-23 20:15
+Senior  Data Engineer-MarTech,H&R Block,"None, Missouri","Our Company
+
+We care about helping people. Our purpose is to provide help and inspire confidence in our clients and communities everywhere. Our associates feel a sense of belonging in an inclusive place with an amazing history and a sharp focus on our future. Our connected culture is who we are and how we work together to achieve our strategies, accelerate our transformation, and achieve extraordinary results. It’s an exciting time to be a part of H&R Block!
+What you'll do...
+
+H&R Block is looking for an experienced Senior Software Engineer who is passionate about data and experience in MarTech skills. As a Senior Software Engineer, you will work independently collaborating with lead, or principal software engineers to design, develop, and maintain software components and products that support H&R Block business applications.
+
+You will work on all aspects of the design, development, and delivery of data solutions, including problem definition, testing and evaluation, and deploying end-to-end pipelines and solutions in production on Azure. The responsibilities include:
+• Design, develop and test enterprise MarTech platforms for data engineering using SQL, Azure Data engineering skills including Azure Data Factory, Databricks/Fabric technologies.
+• Proficiency in Azure-based cloud technologies to support data needs, along with working in marketing projects (Adobe Experience Platform and/or Salesforce Marketing Cloud platform).
+
+Day to day, you’ll...
+• Leverage cutting-edge data technologies, programming languages, and industry-standard coding practices to innovate new features and optimize existing product/marketing functionalities.
+• Design, develop, and maintain high-quality software components.
+• Create and execute unit tests, troubleshoot issues, and resolve defects efficiently.
+• Collaborate with Product, architects and cross-functional teams to align on requirements and implementation strategies.
+• Translate business and functional requirements into clear technical specifications and product deliverables.
+• Participate in technical design discussions and conduct code reviews to ensure quality and consistency.
+• Document system architecture, design approaches, and development processes for future reference.
+• Develop and maintain unit test plans and alpha test plans to support product validation.
+• Stay current with emerging technologies, tools, and methodologies to continuously improve design, development, and deployment practices.
+• Be part of a high-impact team that powers data-driven marketing strategies for one of the most recognized brands in the industry. Our MarTech squad is agile, collaborative, and committed to innovation and continuous learning.
+• What you'll bring to the team...
+• Bachelor’s degree or the equivalent in Computer Science, Computer Information Systems, Information Technology, or related field.
+• Minimum five years of recent experience in developing, debugging, and maintaining code with below skillsets,
+• SQL, Azure Data engineering skills including Azure Data Factory, Databricks and/or Fabric technologies.
+• Deep knowledge in SQL Server databases, along with expertise in data analysis, data integrations.
+• Proficient with AI technologies to enhance day to day activities.
+• Well-honed troubleshooting skills at various levels of complexity.
+
+It would be even better if you also had...
+• Exposure to Marketing platforms (Adobe AEP - CDP, AJO and/or Sales Force Marketing Cloud), AdTech
+• Adobe Experience Cloud (Analytics, Target, Launch) experience
+• Hands on experience with Python and/or .Net
+• Experience in cloud services (Azure data services)
+
+Why work for us
+
+Since 1955, we have been leaders in tax preparation, financial services, and small business solutions. With 70,000 associates and 9,000 retail tax locations across North America, Australia, Ireland, and India, we have helped millions of clients and countless communities. If you embrace challenges as opportunities, value winning as a team, and seek to make a meaningful difference, join us on our journey. You’ll reap the rewards of helping others along with competitive compensation and benefits to support your health and well-being.
+
+Specific benefits may vary based on your role. For detailed eligibility requirements and benefits information, visit blockbenefits.com.
+
+Equal Opportunity Employer: H&R Block does not tolerate discrimination based on a person’s race, color, religion, ancestry, age, sex/gender (including pregnancy, childbirth, related medical conditions and sex-based stereotypes and transgender status), sexual orientation, gender identity or expression, service in the Armed Forces, national origin, physical or mental disability, genetic information, citizenship status or any other status protected by law.
+Pay Range Information
+
+The pay range for this position is listed below. Local minimum wage laws apply. This information is posted pursuant to local requirements to provide applicants with information about what they might be eligible to receive. Individual pay decisions will depend on job-related factors such as experience, education, skill, performance, and geographic location where work will be performed. Successful candidates may be able to participate in one or more incentive compensation or short-term incentive plans, which could generate additional earnings in accordance with the terms of each plan.
+
+Qualifying associates can enroll themselves and/or their eligible dependents in medical and prescription drug coverage; can participate in the H&R Block Retirement Savings Plan (401(k) Plan), the Employee Assistance Program, (virtual) fitness center programs, and the associate discount program; are automatically enrolled in Business Travel Accident Insurance; and receive Associate Tax Prep benefit.
+Pay Range
+
+$101,200.00 - $161,900.00/Yr.
+Sponsored Job
+
+#LI-SH1 #LI-Remote",https://careers.hrblock.com/jobs/38341?lang=en-us&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or permanent residents are eligible, nor does it mention that no visa sponsorship is available. Therefore, H1B visa holders are likely eligible for this position.",2025-12-23 20:15
+Data Engineer Jobs in Portland,Cosmoquick,"Portland, Oregon",Find Data Engineer jobs in Portland. Apply to verified employers through Cosmoquick. Hire developers in Portland. Creative tech hub in Pacific Northwest.,https://cosmoquick.com/jobs-in/portland/jobs-data-engineer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only US citizens or Green Card holders are eligible, nor does it mention that no visa sponsorship is available. Therefore, H1B visa holders can be considered eligible for this position.",2025-12-23 20:15
+Sr. Data Engineer,CVS Health,"Colorado, Texas","At CVS Health, we're building a world of health around every consumer and surrounding ourselves with dedicated colleagues who are passionate about transforming health care.As the nation's leading health solutions company, we reach millions of Americans through our local presence, digital channels and more than 300,000 purpose-driven colleagues - caring for people where, when and how they choose in a way that is uniquely more connected, more convenient and more compassionate. And we do it all with heart, each and every day.Position SummaryWe're seeking a Sr. Data Engineer to design and implement data pipelines that power analytical capabilities. This hands-on role requires an understanding of data engineering best practices and the ability to translate business requirements into technical solutions.You will be part of a dedicated team creating datasets for analytic and data science workloads. Key Responsibilities:Data Pipeline Development: Design and build ETL/ELT data pipelines to ingest, process, and transform large datasets from multiple sources.Performance Optimization: Implement best practices for performance tuning, partitioning, and clustering to optimize data queries and reduce costs.Data Quality & Governance: Establish and enforce data quality standards, data governance frameworks, and security policies for data storage and access.Data Modeling & Architecture: Develop and optimize data models and schemas to support analytics, reporting, and machine learning requirements.Data Integration & Transformation: Collaborate with data scientists and analysts to design data solutions that integrate with BI tools and machine learning models.Documentation & Knowledge Sharing: Create comprehensive documentation for data pipelines, workflows, and processes. Share best practices and mentor junior data engineers.Design and architect data infrastructure analytical workloads.Required Qualifications5+ years of applicable work experienceProficiency in Python, specifically with ETL pipelines.Strong proficiency in SQL and experience in developing complex queries.Familiarity with pySpark, DBT, or other similar frameworks.Experience deploying data pipelines in a cloud environment (Azure, AWS, GCP).Understanding of data warehousing concepts, dimensional modeling, and building data marts.Excellent communication and interpersonal skills, with the ability to collaborate effectively with data scientists, analysts, and product owners.Preferred QualificationsKnowledge of data governance best practices in a cloud environment.Experience with machine learning flows on GCP.Experience with data design in BigQueryExperience working with the Epic data model.Experience working with healthcare data (Tuva or OMOP Models a plus).Education and ExperienceCollege degree or certification in related fieldsAnticipated Weekly Hours40Time TypeFull timePay RangeThe typical pay range for this role is:$83,430.00 - $222,480.00This pay range represents the base hourly rate or base annual full-time salary for all positions in the job grade within which this position falls. The actual base salary offer will depend on a variety of factors including experience, education, geography and other relevant factors. This position is eligible for a CVS Health bonus, commission or short-term incentive program in addition to the base pay range listed above. Our people fuel our future. Our teams reflect the customers, patients, members and communities we serve and we are committed to fostering a workplace where every colleague feels valued and that they belong.Great benefits for great peopleWe take pride in our comprehensive and competitive mix of pay and benefits - investing in the physical, emotional and financial wellness of our colleagues and their families to help them be the healthiest they can be. In addition to our competitive wages, our great benefits include:Affordable medical plan options, a 401(k) plan (including matching company contributions), and an employee stock purchase plan.No-cost programs for all colleagues including wellness screenings, tobacco cessation and weight management programs, confidential counseling and financial coaching.Benefit solutions that address the different needs and preferences of our colleagues including paid time off, flexible work schedules, family leave, dependent care resources, colleague assistance programs, tuition assistance, retiree medical access and many other benefits depending on eligibility.For more information, visit https://jobs.cvshealth.com/us/en/benefitsWe anticipate the application window for this opening will close on: 12/29/2025Qualified applicants with arrest or conviction records will be considered for employment in accordance with all federal, state and local laws.",https://career.io/job/remote-sr-data-engineer-colorado-cvs-health-544283b6f84ebd77ebc92194e8644cd7?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions against H1B visa holders, such as ""Green Card required,"" ""US Citizen only,"" or ""No visa sponsorship."" There are also no statements indicating that sponsorship is unavailable, which suggests that H1B candidates may be considered.",2025-12-23 20:15
+Staff Data Engineer - QuickBooks Capital,Intuit,"Mountain View, California","The QuickBooks Capital Data team is responsible for building and maintaining the core data capabilities and pipelines that drive insights, decisions, and innovation for QuickBooks Capital. Our stakeholders include data scientists, backend engineers, product managers, and business leaders, all of whom rely on the team to deliver seamless data integrations, high-quality pipelines, and optimized data platforms. The data team plays a critical role in empowering QuickBooks Capital to scale, grow, and provide exceptional experiences to our customers.
+
+As a Staff Data Engineer within the team, you will partner closely with cross-functional teams to execute on strategic data initiatives that shape the future of QuickBooks Capital’s data ecosystem. Tasks will include creating scalable data pipelines, designing data products, and optimizing data workflows to support analytics, business intelligence, and AI-driven use cases. The team prioritizes driving impactful outcomes using data, such as improving loan approval processes, enhancing customer insights, and fostering innovation through robust data infrastructure. If you are passionate about solving complex engineering problems, thrive in a collaborative environment, and have a pragmatic approach to building scalable and resilient data systems, this role could be a great fit for you.
+
+Responsibilities
+
+Execute and Deliver Scalable Data Solutions: Collaborate with external technical teams, data scientists, analysts, and stakeholders to understand requirements and translate business challenges into reliable data-driven solutions. Own the end-to-end execution of projects by designing, developing, and deploying data pipelines to meet the growing data needs of QuickBooks Capital.
+
+Build and Optimize Data Platforms: Design, implement, and maintain robust data pipelines that transform and load large datasets across multiple domains. Focus on delivering data products with accuracy, reliability, and efficiency to empower actionable insights and data-driven decision-making.
+
+Experiment and Innovate: Utilize tools like Databricks and advanced big data technologies to build and iterate on proof-of-concepts (POCs). Develop innovative solutions, including API integrations, advanced data modeling, and scalable platforms, to support analytics and machine learning use cases.
+
+Create Business Impact with Data: Strategically apply data solutions to address key business challenges and deliver value through actionable insights. Uphold best practices in data governance and security while ensuring data accessibility, compliance, and reliability across the organization.
+
+Collaborate and Empower the Team: Work effectively in a dynamic environment, collaborating with cross-functional teams to drive impactful results. Take ownership of monitoring pipeline performance, resolving issues, and mentoring team members to foster excellence and growth within the team.
+
+Qualifications
+• Bachelor's or Master's degree in Computer Science, Data Science, Engineering, or a related field.
+• A minimum of 10 years of hands-on experience in data engineering or a similar role focused on big data platforms and solutions.
+• Strong understanding of data engineering and dimensional design fundamentals, front-end analysis / data visualization, and learning new technologies quickly. Good understanding of data federation techniques and aggregation of data at scale from multiple source systems.
+• Strong proficiency in programming languages such as Python, Java, or Scala, and experience with SQL.
+• Demonstrated experience with big data tools and frameworks such as Apache Spark, Hadoop or Databricks.
+• Experience with data modeling, data warehousing, and building ETL pipelines.
+
+Intuit provides a competitive compensation package with a strong pay for performance rewards approach. This position will be eligible for a cash bonus, equity rewards and benefits, in accordance with our applicable plans and programs (see more about our compensation and benefits at Intuit®: Careers | Benefits). Pay offered is based on factors such as job-related knowledge, skills, experience, and work location. To drive ongoing fair pay for employees, Intuit conducts regular comparisons across categories of ethnicity and gender. The expected base pay range for this position is: $197,000 - $263,670",https://jobs.intuit.com/job/mountain-view/staff-data-engineer-quickbooks-capital/27595/89415815008?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions regarding visa sponsorship or work authorization. There are no statements indicating that only U.S. citizens or Green Card holders are eligible, nor does it mention that no sponsorship is available. Therefore, H1B visa holders are likely eligible for this position.",2025-12-23 20:15
+Data Engineer - Spark Developer - Full-time,EUROPEAN DYNAMICS,"Athens, Ohio","Are you passionate about big data and eager to work with cutting-edge technologies? We have an exciting opportunity for a Data Engineer - Spark Developer to join our dynamic and expanding development teams. Whether you prefer to work from our vibrant offices in Athens or remotely, we welcome your talent and enthusiasm.
+
+What You'll Do:
+• Design, develop, test, deploy, maintain, and improve data pipelines;
+• Coding using Apache Spark on Azure Databricks;
+• Design and develop big data architectures using Azure Data Factory, Service Bus, BI, Databricks, and other Azure Services.
+
+Requirements
+
+Must-Have Qualifications:
+• Bachelor's degree in Computer Science or Software Engineering;
+• Strong analytical skills, team - and quality-oriented, keen to learn and excel;
+• Thorough knowledge of Apache Spark;
+• Experience as a Data Engineer;
+• Advanced knowledge of Python or Scala;
+• Spark query tuning and performance optimization;
+• Experience with cloud platforms (Azure, AWS, or GCP);
+• Fluency in verbal and written English.
+
+Nice-to-Have Qualifications:
+• Understand and analyze DAG operations;
+• Provide cost estimates for big data processing;
+• Write and review architecture documents.
+
+Benefits
+
+We believe in rewarding talent and dedication. Here's what you can expect as part of our team:
+• Competitive full-time salary;
+• Private Health Coverage on the Company’s group program;
+• Flexible Working Hours;
+• Top-of-the-Line Tools;
+• Professional Development: Benefit from language courses, specialized training, and continuous learning opportunities;
+• Career Growth: Work with some of the most innovative and exciting specialists in the industry;
+• Dynamic Work Environment: Thrive in a setting that offers challenging goals, autonomy, and mentoring, fostering both personal and company growth.
+
+If you want an exciting challenge, work with some of the coolest technologies, and enjoy your time doing it, then join us! Submit your detailed CV in English, quoting reference: (DESD/12/25).
+
+You may also consider all our other open vacancies by visiting the career section of our website () and follow us on Twitter (@EURODYN_Careers) and LinkedIn.
+
+EUROPEAN DYNAMICS (ED) () is a leading European Software, Information, and Communication Technologies company, operating internationally (Athens, Brussels, Luxembourg, Copenhagen, Berlin, Stockholm, London, Nicosia, Valetta, Vienna, Den Haag, Hong Kong, etc.) The company employs over 1100 engineers, IT experts, and consultants (around 3% PhD, 41% MSc, and 54% BSc). We design and develop software applications using integrated, state-of-the-art technology. Our current IT projects have a value exceeding 300 million EURO. EUROPEAN DYNAMICS is a renowned supplier of IT services to European Union Institutions, international organizations, European Agencies, and national government Administrations in 40 countries and 4 continents.
+
+As part of our dedication to the diversity of our workforce, we are committed to Equal Employment Opportunity without regard for race, colour, national origin, ethnicity, gender, disability, sexual orientation, gender identity, or religion.
+
+EUROPEAN DYNAMICS (ED) adheres to the General Data Protection Regulation principles by applying its Privacy Policy as published at . By submitting an application to this position and by sharing your personal data with ED, you acknowledge and accept its Policy and authorize ED to process your personal data for the purposes of the company's recruitment opportunities, in line with the Policy.
+
+Are you passionate about big data and eager to work with cutting-edge technologies? We have an exciting opportunity for a Data Engineer - Spark Developer to join our dynamic and expanding development teams. Whether you prefer to work from our vibrant offices in Athens or remotely, we welcome your talent and enthusiasm.
+
+What You'll Do:
+• Design, develop, test, deploy, maintain, and improve data pipelines;
+• Coding using Apache Spark on Azure Databricks;
+• Design and develop big data architectures using Azure Data Factory, Service Bus, BI, Databricks, and other Azure Services.
+
+Requirements
+
+Must-Have Qualifications:
+• Bachelor's degree in Computer Science or Software Engineering;
+• Strong analytical skills, team - and quality-oriented, keen to learn and excel;
+• Thorough knowledge of Apache Spark;
+• Experience as a Data Engineer;
+• Advanced knowledge of Python or Scala;
+• Spark query tuning and performance optimization;
+• Experience with cloud platforms (Azure, AWS, or GCP);
+• Fluency in verbal and written English.
+
+Nice-to-Have Qualifications:
+• Understand and analyze DAG operations;
+• Provide cost estimates for big data processing;
+• Write and review architecture documents.
+
+Benefits
+
+We believe in rewarding talent and dedication. Here's what you can expect as part of our team:
+• Competitive full-time salary;
+• Private Health Coverage on the Company’s group program;
+• Flexible Working Hours;
+• Top-of-the-Line Tools;
+• Professional Development: Benefit from language courses, specialized training, and continuous learning opportunities;
+• Career Growth: Work with some of the most innovative and exciting specialists in the industry;
+• Dynamic Work Environment: Thrive in a setting that offers challenging goals, autonomy, and mentoring, fostering both personal and company growth.
+
+If you want an exciting challenge, work with some of the coolest technologies, and enjoy your time doing it, then join us! Submit your detailed CV in English, quoting reference: (DESD/12/25).
+
+You may also consider all our other open vacancies by visiting the career section of our website () and follow us on Twitter (@EURODYN_Careers) and LinkedIn.
+
+EUROPEAN DYNAMICS (ED) () is a leading European Software, Information, and Communication Technologies company, operating internationally (Athens, Brussels, Luxembourg, Copenhagen, Berlin, Stockholm, London, Nicosia, Valetta, Vienna, Den Haag, Hong Kong, etc.) The company employs over 1100 engineers, IT experts, and consultants (around 3% PhD, 41% MSc, and 54% BSc). We design and develop software applications using integrated, state-of-the-art technology. Our current IT projects have a value exceeding 300 million EURO. EUROPEAN DYNAMICS is a renowned supplier of IT services to European Union Institutions, international organizations, European Agencies, and national government Administrations in 40 countries and 4 continents.
+
+As part of our dedication to the diversity of our workforce, we are committed to Equal Employment Opportunity without regard for race, colour, national origin, ethnicity, gender, disability, sexual orientation, gender identity, or religion.
+
+EUROPEAN DYNAMICS (ED) adheres to the General Data Protection Regulation principles by applying its Privacy Policy as published at . By submitting an application to this position and by sharing your personal data with ED, you acknowledge and accept its Policy and authorize ED to process your personal data for the purposes of the company's recruitment opportunities, in line with the Policy.",https://www.snagajob.com/jobs/1066913475?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic,JSearch,True,"The job posting does not contain any explicit or implicit restrictions against H1B visa holders, such as requirements for U.S. citizenship or permanent work authorization. There are no statements indicating that visa sponsorship is unavailable, and the language is inclusive regarding the eligibility of candidates.",2025-12-23 20:15
