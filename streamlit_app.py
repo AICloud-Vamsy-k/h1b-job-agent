@@ -86,65 +86,6 @@ with TAB_PROFILE:
             st.error(f"Failed to set current resume: {e}")
 
 
-# ============= TAB 1: Single JD flow =============
-with TAB_SINGLE:
-    st.subheader("Single Job Analysis")
-
-    jd_text = st.text_area(
-        "Job Description",
-        height=300,
-        help="Paste any JD here",
-    )
-
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        do_match = st.button("1️⃣ Evaluate Match")
-    with col2:
-        do_resume = st.button("2️⃣ Generate Tailored Resume")
-    with col3:
-        do_gap = st.button("3️⃣ Generate Gap Plan")
-
-    if jd_text and (do_match or do_resume or do_gap):
-        # Always evaluate once; reuse for other actions
-        with st.spinner("Evaluating job match..."):
-            match_result = evaluate_job(jd_text)
-
-        st.markdown("### Match Result")
-        st.write("**Match score:**", match_result.get("match_score"))
-        st.write("**Strengths:**", match_result.get("strengths"))
-        st.write("**Gaps:**", match_result.get("gaps"))
-        st.write("**Summary:**", match_result.get("summary"))
-
-        # ---- Tailored resume generation ----
-        if do_resume:
-            with st.spinner("Generating tailored resume..."):
-                resume_result = generate_tailored_resume(jd_text, match_result)
-
-            st.markdown("### Tailored Resume (Preview)")
-            st.markdown(resume_result["markdown_text"])
-
-            if resume_result["docx_path"] is not None:
-                docx_path = resume_result["docx_path"]
-                with open(docx_path, "rb") as f:
-                    docx_bytes = f.read()
-
-                st.download_button(
-                    label="📥 Download Tailored Resume (DOCX)",
-                    data=docx_bytes,
-                    file_name=docx_path.name,
-                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                )
-            else:
-                st.warning("DOCX could not be generated (no template or invalid JSON).")
-
-        # ---- Gap analysis ----
-        if do_gap:
-            with st.spinner("Generating gap analysis + learning plan..."):
-                gap_text = analyze_gaps_for_learning(jd_text, match_result)
-            st.markdown("### Gap Analysis & Learning Plan")
-            st.markdown(gap_text)
-
-
 # ============ NEW TAB: H1B JOB FINDER ============
 with TAB_H1B:
     st.subheader("🌐 Real-Time H1B Job Finder")
@@ -154,6 +95,7 @@ with TAB_H1B:
     - ✅ AI-powered H1B eligibility filtering
     - ✅ Excludes "GC/Citizen only" postings
     - ✅ Generates downloadable CSV report
+    - ✅ Sends email report automatically
     """)
     
     # Search parameters
@@ -177,6 +119,42 @@ with TAB_H1B:
                               help="Each page = ~10 jobs")
     with col4:
         use_ai_filter = st.checkbox("Use AI filtering (slower but more accurate)", value=True)
+    
+    # EMAIL CONFIGURATION - NEW!
+    st.markdown("### 📧 Email Report Settings")
+    col5, col6 = st.columns(2)
+    with col5:
+        recipient_email = st.text_input(
+            "Recipient Email",
+            value="",  # IMPORTANT: Empty by default so user must enter
+            placeholder="your-email@example.com",
+            help="Email address to receive the job report"
+        )
+    with col6:
+        send_email_enabled = st.checkbox("Send email report", value=True)
+    
+    # DEBUG PANEL - Shows current email settings
+    with st.expander("🔧 Email Debug Panel (expand to check config)"):
+        st.write("**Current Settings:**")
+        st.write(f"- Send email enabled: `{send_email_enabled}`")
+        st.write(f"- Recipient email: `{recipient_email if recipient_email else 'NOT SET'}`")
+        st.write(f"- Will send email: `{send_email_enabled and bool(recipient_email)}`")
+        
+        st.markdown("---")
+        st.write("**Email Configuration Check:**")
+        try:
+            from config.settings import SMTP_HOST, SMTP_PORT, EMAIL_USER, EMAIL_PASSWORD
+            st.success("✅ Email config imported successfully")
+            st.code(f"""
+SMTP_HOST: {SMTP_HOST}
+SMTP_PORT: {SMTP_PORT}
+EMAIL_USER: {EMAIL_USER}
+EMAIL_PASSWORD: {'***' + EMAIL_PASSWORD[-4:] if EMAIL_PASSWORD else 'NOT SET'}
+            """, language="text")
+        except Exception as config_error:
+            st.error(f"❌ Config import failed: {config_error}")
+            import traceback
+            st.code(traceback.format_exc())
     
     # Run button
     if st.button("🔍 Find H1B Jobs", type="primary"):
@@ -207,7 +185,7 @@ with TAB_H1B:
                     
                     # Show table
                     st.markdown("### 📊 H1B-Eligible Jobs")
-                    display_df = df[['title', 'company', 'location', 'source', 'eligibility_reason']]
+                    display_df = df[['title', 'company', 'location', 'source']]
                     st.dataframe(display_df, use_container_width=True)
                     
                     # Download button
@@ -219,21 +197,156 @@ with TAB_H1B:
                         mime="text/csv"
                     )
                     
+                    # ========== EMAIL SENDING - ENHANCED WITH DEBUG ==========
+                    st.write(f"**Email Debug:** send_email_enabled={send_email_enabled}, recipient_email='{recipient_email}'")
+                    
+                    if send_email_enabled and recipient_email:
+                        st.markdown("---")
+                        st.markdown("### 📧 Sending Email Report")
+                        
+                        with st.spinner(f"Sending email to {recipient_email}..."):
+                            try:
+                                # Import email utilities
+                                st.info("Step 1/5: Importing email sender module...")
+                                from src.utils.email_sender import send_email
+                                from datetime import datetime
+                                st.success("✅ Email sender imported successfully")
+                                
+                                # Create HTML email body
+                                st.info("Step 2/5: Creating HTML email body...")
+                                email_body = f"""
+                                <html>
+                                <head>
+                                    <style>
+                                        body {{ font-family: Arial, sans-serif; }}
+                                        .header {{ background-color: #4CAF50; color: white; padding: 20px; text-align: center; border-radius: 5px; }}
+                                        .summary {{ margin: 20px 0; padding: 15px; background-color: #f5f5f5; border-radius: 5px; }}
+                                        table {{ border-collapse: collapse; width: 100%; margin: 20px 0; }}
+                                        th {{ background-color: #4CAF50; color: white; padding: 12px; text-align: left; }}
+                                        td {{ border: 1px solid #ddd; padding: 12px; }}
+                                        tr:nth-child(even) {{ background-color: #f2f2f2; }}
+                                        .footer {{ margin-top: 30px; padding: 10px; font-size: 12px; color: #666; border-top: 1px solid #ddd; }}
+                                        a {{ color: #0073b1; text-decoration: none; }}
+                                    </style>
+                                </head>
+                                <body>
+                                    <div class="header">
+                                        <h1>🌐 H1B Job Search Report</h1>
+                                        <p>Generated on {datetime.now().strftime('%B %d, %Y at %I:%M %p EST')}</p>
+                                    </div>
+                                    
+                                    <div class="summary">
+                                        <h2>Search Summary</h2>
+                                        <p><strong>Keywords:</strong> {job_keywords}</p>
+                                        <p><strong>Location:</strong> {job_location}</p>
+                                        <p><strong>Total Jobs Scraped:</strong> {results['total_jobs']}</p>
+                                        <p><strong>H1B-Eligible Jobs:</strong> {len(results['h1b_jobs'])}</p>
+                                        <p><strong>Exclusion Rate:</strong> {results['exclusion_rate']:.1f}%</p>
+                                    </div>
+                                    
+                                    <h2>Top H1B-Eligible Jobs</h2>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Job Title</th>
+                                                <th>Company</th>
+                                                <th>Location</th>
+                                                <th>Source</th>
+                                                <th>Link</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                """
+                                
+                                # Add first 20 jobs to email
+                                for job in results['h1b_jobs'][:20]:
+                                    email_body += f"""
+                                            <tr>
+                                                <td>{job.get('title', 'N/A')}</td>
+                                                <td>{job.get('company', 'N/A')}</td>
+                                                <td>{job.get('location', 'N/A')}</td>
+                                                <td>{job.get('source', 'N/A')}</td>
+                                                <td><a href="{job.get('url', '#')}">Apply</a></td>
+                                            </tr>
+                                    """
+                                
+                                email_body += """
+                                        </tbody>
+                                    </table>
+                                    
+                                    <div class="footer">
+                                        <p>Full CSV report is attached to this email.</p>
+                                        <p>This is an automated report from H1B Job Search Agent.</p>
+                                    </div>
+                                </body>
+                                </html>
+                                """
+                                st.success("✅ Email body created")
+                                
+                                # Save CSV temporarily for attachment
+                                st.info("Step 3/5: Creating CSV attachment...")
+                                from pathlib import Path
+                                import tempfile
+                                
+                                temp_dir = Path(tempfile.gettempdir())
+                                csv_filename = f"h1b_jobs_{job_keywords.replace(' ', '_')}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+                                csv_path = temp_dir / csv_filename
+                                df.to_csv(csv_path, index=False)
+                                st.success(f"✅ CSV saved: {csv_path}")
+                                
+                                # Send email with attachment
+                                st.info(f"Step 4/5: Sending email to {recipient_email}...")
+                                result = send_email(
+                                    recipient=recipient_email,
+                                    subject=f"H1B Jobs Report: {job_keywords} - {len(results['h1b_jobs'])} jobs found",
+                                    body=email_body,
+                                    attachment=str(csv_path)
+                                )
+                                
+                                st.success(f"✅ Step 5/5: {result}")
+                                st.info(f"📎 Attached: {csv_filename} ({len(results['h1b_jobs'])} jobs)")
+                                
+                                # Clean up temp file
+                                csv_path.unlink(missing_ok=True)
+                                st.success("✅ Temporary file cleaned up")
+                                
+                            except ImportError as import_error:
+                                st.error(f"❌ Import Error: {str(import_error)}")
+                                st.error("This usually means the send_email function is not found in email_sender.py")
+                                import traceback
+                                st.code(traceback.format_exc())
+                                st.warning("Results are still available for download above.")
+                                
+                            except Exception as email_error:
+                                st.error(f"❌ Email sending failed: {str(email_error)}")
+                                st.error(f"Error type: {type(email_error).__name__}")
+                                import traceback
+                                st.code(traceback.format_exc())
+                                st.warning("Results are still available for download above.")
+                    
+                    elif send_email_enabled and not recipient_email:
+                        st.warning("⚠️ Email sending is enabled but no recipient email entered!")
+                        st.info("💡 Enter your email address in the 'Recipient Email' field above to receive the report.")
+                    
+                    elif not send_email_enabled:
+                        st.info("ℹ️ Email sending is disabled. Check the 'Send email report' box to enable.")
+                    
                     # Show individual job details (expandable)
                     st.markdown("### 📋 Job Details")
                     for idx, job in enumerate(results['h1b_jobs'][:10]):  # Show first 10
                         with st.expander(f"{job['title']} - {job['company']}"):
                             st.write(f"**Location:** {job['location']}")
                             st.write(f"**Source:** {job['source']}")
-                            st.write(f"**H1B Status:** {job['eligibility_reason']}")
                             st.write(f"**Description:** {job['description'][:300]}...")
-                            st.link_button("Apply Now", job['url'])
+                            if 'url' in job and job['url']:
+                                st.link_button("Apply Now", job['url'])
                 else:
                     st.warning("No H1B-eligible jobs found. Try different keywords or location.")
                     
             except Exception as e:
                 st.error(f"Error running H1B finder: {e}")
-                st.code(str(e), language="text")
+                import traceback
+                st.code(traceback.format_exc())
     
     # Show previous results if available
     st.markdown("---")
@@ -242,9 +355,11 @@ with TAB_H1B:
     if report_path.exists():
         try:
             import pandas as pd
-            df = pd.read_csv(report_path)
-            st.write(f"Last run: {report_path.stat().st_mtime}")
-            st.dataframe(df.head(10), use_container_width=True)
+            df_report = pd.read_csv(report_path)
+            from datetime import datetime
+            mod_time = datetime.fromtimestamp(report_path.stat().st_mtime)
+            st.write(f"Last run: {mod_time.strftime('%B %d, %Y at %I:%M %p')}")
+            st.dataframe(df_report.head(10), use_container_width=True)
         except Exception as e:
             st.warning(f"Could not load previous report: {e}")
 
