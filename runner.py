@@ -11,25 +11,41 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 def show_menu():
     print("\n" + "="*70)
-    print("  H1B JOB AGENT - Main Menu")
+    print(" 🚀 H1B JOB AGENT - Main Menu (RAG-Enabled)")
     print("="*70)
-    print("\n1. Run sample job match example")
-    print("2. Paste JD and evaluate match")
-    print("3. Paste JD and generate tailored resume")
-    print("4. Paste JD and get gap analysis + learning plan")
-    print("5. Run H1B Job Finder (real-time job scraping)")
-    print("6. Run Daily Pipeline (batch process jobs_sample.csv)")
-    print("7. Launch Streamlit UI")
-    print("8. Exit")
+    print("\n1. 🧪 Test RAG (new - verify resume indexing)")
+    print("2. Run sample job match example")
+    print("3. Paste JD and evaluate match")
+    print("4. Paste JD and generate tailored resume")
+    print("5. Paste JD and get gap analysis + learning plan")
+    print("6. Run H1B Job Finder (real-time job scraping)")
+    print("7. Run Daily Pipeline (batch process jobs_sample.csv)")
+    print("8. Launch Streamlit UI")
+    print("9. Exit")
     print("="*70)
 
+def test_rag_index():
+    """Option 1: Test RAG indexing from latest uploaded resume"""
+    from src.rag.profile_rag import build_or_refresh_profile_index, retrieve_relevant_chunks
+    
+    print("\n🧪 Testing RAG from latest uploaded resume...")
+    try:
+        build_or_refresh_profile_index()
+        chunks = retrieve_relevant_chunks("software engineer python data", top_k=5)
+        print(f"✅ RAG SUCCESS: Indexed {len(chunks)} chunks from your resume")
+        for i, chunk in enumerate(chunks):
+            print(f"  {i+1}. {chunk[:100]}...")
+    except Exception as e:
+        print(f"❌ RAG ERROR: {e}")
+        print("💡 Upload a resume via Streamlit first!")
+
 def run_sample_job_match():
-    """Option 1: Run built-in sample"""
+    """Option 2: Run built-in sample"""
     from src.crews.job_match_crew import run_job_match_example
     run_job_match_example()
 
 def evaluate_pasted_jd():
-    """Option 2: Evaluate pasted JD"""
+    """Option 3: Evaluate pasted JD"""
     from src.crews.job_match_crew import evaluate_job
     
     print("\nPaste job description below.")
@@ -54,7 +70,7 @@ def evaluate_pasted_jd():
     print(f"Summary: {result.get('summary')}")
 
 def generate_tailored_resume_interactive():
-    """Option 3: Generate tailored resume"""
+    """Option 4: Generate tailored resume"""
     from src.crews.job_match_crew import evaluate_job
     from src.crews.resume_builder_crew import generate_tailored_resume
     
@@ -98,7 +114,7 @@ def generate_tailored_resume_interactive():
         print(f"✅ DOCX saved to: {resume_result['docx_path']}")
 
 def generate_gap_analysis_interactive():
-    """Option 4: Gap analysis"""
+    """Option 5: Gap analysis"""
     from src.crews.job_match_crew import evaluate_job
     from src.crews.gap_analyzer_crew import analyze_gaps_for_learning
     
@@ -137,12 +153,12 @@ def generate_gap_analysis_interactive():
     print(f"\n✅ Gap analysis saved to: {out_path}")
 
 def run_h1b_finder():
-    """Option 5: H1B Job Finder"""
+    """Option 6: H1B Job Finder"""
     from src.pipelines.h1b_pipeline import run_h1b_job_finder
     run_h1b_job_finder()
 
 def run_daily_pipeline():
-    """Option 6: Daily pipeline"""
+    """Option 7: Daily pipeline"""
     from src.pipelines.daily_pipeline import run_daily_job_pipeline
     
     confirm = input("Generate tailored resumes for candidate jobs? (y/n): ").strip().lower()
@@ -155,7 +171,7 @@ def run_daily_pipeline():
     )
 
 def launch_streamlit():
-    """Option 7: Launch Streamlit"""
+    """Option 8: Launch Streamlit"""
     import os
     os.system('streamlit run streamlit_app.py')
 
@@ -163,29 +179,31 @@ def main():
     """Main entry point"""
     while True:
         show_menu()
-        choice = input("\nSelect (1-8): ").strip()
+        choice = input("\nSelect (1-9): ").strip()
         
         if choice == '1':
-            run_sample_job_match()
+            test_rag_index()
         elif choice == '2':
-            evaluate_pasted_jd()
+            run_sample_job_match()
         elif choice == '3':
-            generate_tailored_resume_interactive()
+            evaluate_pasted_jd()
         elif choice == '4':
-            generate_gap_analysis_interactive()
+            generate_tailored_resume_interactive()
         elif choice == '5':
-            run_h1b_finder()
+            generate_gap_analysis_interactive()
         elif choice == '6':
-            run_daily_pipeline()
+            run_h1b_finder()
         elif choice == '7':
-            launch_streamlit()
+            run_daily_pipeline()
         elif choice == '8':
+            launch_streamlit()
+        elif choice == '9':
             print("\n👋 Goodbye!")
             break
         else:
             print("❌ Invalid choice")
         
-        if choice in ['1', '2', '3', '4', '5', '6']:
+        if choice in ['1', '2', '3', '4', '5', '6', '7']:
             input("\nPress Enter to continue...")
 
 if __name__ == "__main__":

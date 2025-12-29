@@ -7,8 +7,9 @@ from typing import Any, Dict
 from crewai import Agent, Task, Crew, LLM
 
 from config.settings import DEFAULT_MODEL_NAME  # Updated import
-from src.rag.profile_rag import retrieve_relevant_chunks
+from src.rag.profile_rag import retrieve_relevant_chunks, build_or_refresh_profile_index  # ✅ ADDED build_or_refresh_profile_index
 from src.core.profile_builder import get_or_build_profile_summary  # Updated import
+
 
 
 
@@ -19,20 +20,18 @@ def create_job_match_crew(job_description: str) -> Crew:
     - Profile summary derived from the current resume.
     - RAG resume chunks from Chroma.
     """
+    # ✅ BUILD RAG INDEX FROM UPLOADED RESUME (NEW)
+    build_or_refresh_profile_index()
+
     # High-level summary from resume
     profile_summary = get_or_build_profile_summary()
 
-    # Most relevant resume chunks for this JD (RAG)
-    #relevant_chunks = retrieve_relevant_chunks(
-    #    query="profile and experience relevant to this job description: " + job_description,
-    #    top_k=5,
-    #)
-    #relevant_chunks_text = "\n\n".join(relevant_chunks) if relevant_chunks else "(no relevant chunks found)"
-
-    # Most relevant resume chunks for this JD (RAG)
-    # TEMP: disable RAG completely to avoid Chroma/index issues
-    relevant_chunks = []
-    relevant_chunks_text = "(RAG disabled for debugging)"
+    # ✅ UNCOMMENT RAG (REMOVED TEMP DISABLE)
+    relevant_chunks = retrieve_relevant_chunks(
+        query="profile and experience relevant to this job description: " + job_description,
+        top_k=5,
+    )
+    relevant_chunks_text = "\n\n".join(relevant_chunks) if relevant_chunks else "(no relevant chunks found)"
 
     # Explicit OpenAI LLM so CrewAI knows which provider to use
     openai_llm = LLM(
@@ -97,6 +96,7 @@ Most relevant experience chunks for this job (retrieved via RAG from resume):
     return crew
 
 
+
 def evaluate_job(job_description: str) -> Dict[str, Any]:
     """Run the Job Match crew on a job description and return a dict."""
     import time
@@ -134,6 +134,7 @@ def evaluate_job(job_description: str) -> Dict[str, Any]:
             "summary": raw_text,
             "raw": raw_text,
         }
+
 
 
 def run_job_match_example() -> None:

@@ -7,36 +7,26 @@ import json
 from crewai import Agent, Task, Crew
 
 from config.settings import DEFAULT_MODEL_NAME
-from src.rag.profile_rag import retrieve_relevant_chunks
+from src.rag.profile_rag import retrieve_relevant_chunks, build_or_refresh_profile_index
 from src.core.profile_builder import get_or_build_profile_summary
 from src.core.resume_renderer import render_resume_docx_from_template
 
-
-
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
-
-
-def load_base_resume() -> str:
-    """Load the base resume text from data/base_resume.md."""
-    resume_path = DATA_DIR / "base_resume.md"
-    if not resume_path.exists():
-        raise FileNotFoundError(f"Base resume not found at {resume_path}")
-    return resume_path.read_text(encoding="utf-8")
-
 
 def create_resume_editor_crew(
     job_description: str,
     match_result: Dict[str, Any],
-    base_resume_text: str,
 ) -> Crew:
     """
     Create a CrewAI crew that tailors the resume for a specific job.
 
     Uses:
-    - Base resume text (for style/structure and truthful content).
     - Profile summary derived from the current resume.
     - Resume-based RAG chunks from Chroma.
     """
+    # BUILD INDEX FROM UPLOADED RESUME
+    build_or_refresh_profile_index()
+
     # 1) Define the agent
     resume_agent = Agent(
         role="Resume Tailor and ATS-Aware Writer",
@@ -66,17 +56,13 @@ def create_resume_editor_crew(
 
     # 3) Resume-based profile summary + RAG chunks
     profile_summary = get_or_build_profile_summary()
-    #relevant_chunks = retrieve_relevant_chunks(
-    #    query="experience and skills relevant to this job description: " + job_description,
-    #    top_k=10,
-    #)
-    #relevant_chunks_text = (
-    #    "\n\n".join(relevant_chunks) if relevant_chunks else "(no relevant chunks found)"
-    #)
-
-    # TEMP: disable RAG for resume builder as well
-    relevant_chunks = []
-    relevant_chunks_text = "(RAG disabled for debugging)"
+    relevant_chunks = retrieve_relevant_chunks(
+        query="experience and skills relevant to this job description: " + job_description,
+        top_k=10,
+    )
+    relevant_chunks_text = (
+        "\n\n".join(relevant_chunks) if relevant_chunks else "(no relevant chunks found)"
+    )
 
     # 4) Build detailed task description
     task_description = f"""
@@ -90,11 +76,7 @@ You are given:
 --------------------------------------------------------------------
 {profile_summary or "(no profile summary available; resume may not be set yet)"}
 
-3) The candidate's current base resume:
---------------------------------------
-{base_resume_text}
-
-4) An analysis of how well the candidate matches this job:
+3) An analysis of how well the candidate matches this job:
 ----------------------------------------------------------
 Match score (0-1): {match_score}
 
@@ -107,7 +89,7 @@ Gaps:
 Summary of fit:
 {summary}
 
-5) Most relevant resume chunks retrieved for this job (RAG over the current resume):
+4) Most relevant resume chunks retrieved for this job (RAG over the current resume):
 ------------------------------------------------------------------------------------
 {relevant_chunks_text}
 
@@ -153,7 +135,6 @@ Only output the JSON object, nothing else. Ensure all double quotes are escaped 
     )
     return crew
 
-
 def _json_to_markdown(json_content: Dict[str, Any]) -> str:
     """Convert JSON content to markdown for UI preview."""
     parts: list[str] = []
@@ -180,7 +161,6 @@ def _json_to_markdown(json_content: Dict[str, Any]) -> str:
 
     return "\n".join(parts)
 
-
 def generate_tailored_resume(job_description: str, match_result: Dict[str, Any]) -> Dict[str, Any]:
     """
     High-level API: given JD + match_result, generate a tailored resume.
@@ -193,12 +173,9 @@ def generate_tailored_resume(job_description: str, match_result: Dict[str, Any])
           "raw": str,
         }
     """
-    base_resume_text = load_base_resume()
-
     crew = create_resume_editor_crew(
         job_description=job_description,
-        match_result=match_result,
-        base_resume_text=base_resume_text,
+        match_result=match_result,        
     )
 
     result = crew.kickoff()

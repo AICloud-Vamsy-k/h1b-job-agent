@@ -5,8 +5,9 @@ from typing import Any, Dict
 from crewai import Agent, Task, Crew
 
 from config.settings import DEFAULT_MODEL_NAME
-from src.rag.profile_rag import retrieve_relevant_chunks
+from src.rag.profile_rag import retrieve_relevant_chunks, build_or_refresh_profile_index  # ✅ ADDED build_or_refresh_profile_index
 from src.core.profile_builder import get_or_build_profile_summary
+
 
 
 def create_gap_analyzer_crew(
@@ -32,6 +33,9 @@ def create_gap_analyzer_crew(
         verbose=False,
     )
 
+    # ✅ BUILD RAG INDEX FROM UPLOADED RESUME (NEW)
+    build_or_refresh_profile_index()
+
     # Resume-based profile summary and RAG chunks
     profile_summary = get_or_build_profile_summary()
 
@@ -43,16 +47,12 @@ def create_gap_analyzer_crew(
     strengths_text = "\n".join(f"- {s}" for s in strengths)
     gaps_text = "\n".join(f"- {g}" for g in gaps)
 
-    # Use RAG to get the most relevant resume chunks for this JD
-    #relevant_chunks = retrieve_relevant_chunks(
-    #    query="skills and experience relevant to this job description: " + job_description,
-    #    top_k=10,
-    #)
-    #relevant_chunks_text = "\n\n".join(relevant_chunks) if relevant_chunks else "(no relevant chunks found)"
-
-    # TEMP: disable RAG
-    relevant_chunks = []
-    relevant_chunks_text = "(RAG disabled for debugging)"
+    # ✅ UNCOMMENT RAG (REMOVED TEMP DISABLE)
+    relevant_chunks = retrieve_relevant_chunks(
+        query="skills and experience relevant to this job description: " + job_description,
+        top_k=10,
+    )
+    relevant_chunks_text = "\n\n".join(relevant_chunks) if relevant_chunks else "(no relevant chunks found)"
 
     task_description = f"""
 You are helping a senior engineer on H1B in the US improve fit for a specific job.
@@ -116,6 +116,7 @@ Output format:
         verbose=False,
     )
     return crew
+
 
 
 def analyze_gaps_for_learning(
