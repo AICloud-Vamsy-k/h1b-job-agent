@@ -45,8 +45,8 @@ from src.crews.gap_analyzer_crew import analyze_gaps_for_learning  # Gap analysi
 def _resolve_date_filter(label: str):
     """Map UI label to a cutoff datetime (local now-based)."""
     now = datetime.now()
-    if label == "Today":
-        return now.replace(hour=0, minute=0, second=0, microsecond=0)
+    if label == "Last 24 hours":
+        return now - timedelta(hours=24)
     if label == "Last 7 days":
         return now - timedelta(days=7)
     if label == "Last 30 days":
@@ -248,7 +248,8 @@ def run_h1b_job_finder_streamlit(
     num_pages: int = 3,
     use_ai: bool = True,
     match_threshold: float = 0.65,
-    date_filter: str = "Any time",
+    date_filter: str = "Last 24 hours",
+    sources: dict | None = None,
 ):
     """
     Streamlit-compatible version - returns results dict instead of printing.
@@ -276,6 +277,9 @@ def run_h1b_job_finder_streamlit(
         ADZUNA_APP_KEY,
     )
 
+    if sources is None:
+       sources = {"jsearch": True, "adzuna": True, "indeed": True}
+
     # Build RAG index (best-effort)
     try:
         build_or_refresh_profile_index()
@@ -300,6 +304,9 @@ def run_h1b_job_finder_streamlit(
                 location,
                 num_pages,
                 posted_after=posted_after,
+                use_jsearch=sources.get("jsearch", True),
+                use_indeed=sources.get("indeed", True),
+                use_adzuna=sources.get("adzuna", True),
             )
         )
 
@@ -318,6 +325,15 @@ def run_h1b_job_finder_streamlit(
     # Step 3: Job matching
     matched_jobs: list[dict] = []
     for job in h1b_jobs:
+        # Allow Streamlit cancel button to stop further processing
+        try:
+            import streamlit as st
+
+            if getattr(st.session_state, "cancel_run", False):
+                break
+        except Exception:
+            pass
+
         try:
             match_result = evaluate_job(job["description"])
             match_score = match_result.get("match_score", 0)
@@ -325,6 +341,16 @@ def run_h1b_job_finder_streamlit(
             job["match_score"] = match_score
             job["strengths"] = match_result.get("strengths", [])
             job["gaps"] = match_result.get("gaps", [])
+
+            # NEW: flatten gaps and generate per-job use-case text
+            job["gap_skills"] = "; ".join(job["gaps"])
+            try:
+                use_case_text = analyze_gaps_for_learning(
+                    job["description"], match_result
+                )
+            except Exception:
+                use_case_text = ""
+            job["gap_use_case"] = use_case_text
 
             if match_score >= match_threshold:
                 matched_jobs.append(job)

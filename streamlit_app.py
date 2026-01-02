@@ -16,11 +16,14 @@ from src.rag.profile_rag import (
     retrieve_relevant_chunks,
 )
 
-
 st.set_page_config(
     page_title="H1B Job Search Agent",
     layout="wide",
 )
+
+# Cancel flag for long runs
+if "cancel_run" not in st.session_state:
+    st.session_state.cancel_run = False
 
 # ===================== GLOBAL RAG STATUS =====================
 rag_status_col1, rag_status_col2 = st.columns([3, 1])
@@ -239,7 +242,7 @@ with TAB_H1B:
     with col1:
         job_keywords = st.text_input(
             "Job Title/Keywords",
-            value="Data Engineer, Cloud Engineer, Software Engineer, Cloud Architect, Data Architect", 
+            value="Data Engineer, Cloud Engineer, Software Engineer, Cloud Architect, Data Architect",
             help="e.g., 'DevOps Engineer Azure', 'Software Engineer Python'",
         )
     with col2:
@@ -271,16 +274,26 @@ with TAB_H1B:
         )
         generate_resumes = st.checkbox(
             "Generate tailored resumes",
-            value=True,
+            value=False,
         )
 
-    # Date filter (single selectbox)
+    # Posted date filter (default = Last 24 hours)
     date_filter = st.selectbox(
         "Posted date",
-        ["Any time", "Today", "Last 7 days", "Last 30 days"],
+        ["Last 24 hours", "Last 7 days", "Last 30 days", "Any time"],
         index=0,
         help="Filter jobs based on when they were posted",
     )
+
+    # Source filters
+    st.markdown("### Sources to use")
+    src_col1, src_col2, src_col3 = st.columns(3)
+    with src_col1:
+        use_jsearch = st.checkbox("JSearch", value=True)
+    with src_col2:
+        use_adzuna = st.checkbox("Adzuna", value=True)
+    with src_col3:
+        use_indeed = st.checkbox("Indeed", value=True)
 
     # Email settings
     st.markdown("### 📧 Email Report Settings")
@@ -332,8 +345,18 @@ EMAIL_PASSWORD: {'***' + EMAIL_PASSWORD[-4:] if EMAIL_PASSWORD else 'NOT SET'}
 
             st.code(traceback.format_exc())
 
-    # Run button
-    if st.button("🔍 Find H1B Jobs", type="primary"):
+    # Run / Cancel buttons
+    run_col, cancel_col = st.columns([3, 1])
+    with run_col:
+        run_clicked = st.button("🔍 Find H1B Jobs", type="primary")
+    with cancel_col:
+        if st.button("⛔ Cancel current run"):
+            st.session_state.cancel_run = True
+            st.info("Current run will stop after the current job finishes.")
+
+    if run_clicked:
+        # Reset cancel flag at start of a new run
+        st.session_state.cancel_run = False
         with st.spinner("Searching job boards + matching your resume..."):
             try:
                 results = run_h1b_job_finder_streamlit(
@@ -343,6 +366,11 @@ EMAIL_PASSWORD: {'***' + EMAIL_PASSWORD[-4:] if EMAIL_PASSWORD else 'NOT SET'}
                     use_ai=use_ai_filter,
                     match_threshold=match_threshold,
                     date_filter=date_filter,
+                    sources={
+                        "jsearch": use_jsearch,
+                        "adzuna": use_adzuna,
+                        "indeed": use_indeed,
+                    },
                 )
 
                 if results and results["matched_jobs"]:
@@ -380,6 +408,8 @@ EMAIL_PASSWORD: {'***' + EMAIL_PASSWORD[-4:] if EMAIL_PASSWORD else 'NOT SET'}
                             "source",
                             "match_score",
                             "posted_date",
+                            "gap_skills",
+                            "gap_use_case",
                             "url",
                         ]
                     ]
